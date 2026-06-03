@@ -14,25 +14,25 @@ export const metadata: Metadata = {
 // TODO: client to provide final testimonials with signed consent forms per Phase 1 §7.2.
 const TESTIMONIALS = [
   {
-    caseType: "IEP — Elementary",
+    caseType: "IEP · Elementary",
     quote:
       "After two years of being told our son did not qualify for services, Nicole laid out the law in plain language and gave us a path forward. He has the IEP he should have had all along.",
     attribution: "Parent of student, Alameda County",
   },
   {
-    caseType: "Due Process — Middle School",
+    caseType: "Due Process · Middle School",
     quote:
       "The district treated us like we were exaggerating. Nicole treated us like we were correct. The hearing settled before testimony, with the services we had been asking for from the start.",
     attribution: "Parent of student, Kern County",
   },
   {
-    caseType: "Section 504 — High School",
+    caseType: "Section 504 · High School",
     quote:
       "Our daughter was being excluded from activities because of her medical condition. We didn't even know that was a 504 issue. Nicole walked us through what discrimination actually looks like under the law, and the school changed course quickly.",
     attribution: "Parent of student, Contra Costa County",
   },
   {
-    caseType: "IEP — Spanish-language case",
+    caseType: "IEP · Spanish-language case",
     quote:
       "Pude hablar con Nicole en español sobre cada detalle del caso de mi hija. Por primera vez sentí que entendía completamente lo que estaba pasando con su educación.",
     attribution: "Madre de estudiante, Condado de Kern",
@@ -44,7 +44,7 @@ const TESTIMONIALS = [
     attribution: "Parent of student, Los Angeles County",
   },
   {
-    caseType: "IEP — Implementation",
+    caseType: "IEP · Implementation",
     quote:
       "We had won a settlement years ago, but the services were never actually being delivered. Nicole reopened the case to enforce what we had already agreed to. The services started showing up the next month.",
     attribution: "Parent of student, Alameda County",
@@ -83,7 +83,7 @@ export default function TestimonialsPage() {
 
       <CTABanner
         heading="Do you have a story you would like to share?"
-        body="If we represented your family and you would be willing to add your voice — anonymously — please get in touch."
+        body="If we represented your family and you would be willing to add your voice anonymously, please get in touch."
         primaryCta={{ label: "Tell us about your case", href: "/contact" }}
         secondaryCallLabel={`Call ${SITE.phone}`}
       />

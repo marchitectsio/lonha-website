@@ -43,7 +43,7 @@ export default function HomePageEs() {
   return (
     <SiteFrame locale="es" otherLocaleHref="/">
       <Hero
-        eyebrow="Derechos civiles en educación especial — Desde 2001"
+        eyebrow="Derechos civiles en educación especial · Desde 2001"
         headline="Su hijo tiene derecho a una educación diseñada para él. Nosotros nos aseguramos de que la reciba."
         subheadline="La Oficina Legal de Nicole Hodge Amey representa a padres de niños con discapacidades en desacuerdos sobre el IEP, audiencias de proceso de impugnación y casos de discriminación por discapacidad. Llevamos más de veinte años haciendo esto, y solo esto, en California."
         primaryCta={{ label: "Programe una consulta", href: "/es/contacto" }}
@@ -73,7 +73,7 @@ export default function HomePageEs() {
               Tres tipos de casos que tomamos cada semana.
             </h2>
             <p className="mt-5 text-lg text-[color:var(--text-primary)] max-w-prose">
-              Estas son las situaciones por las que los padres nos llaman con mayor frecuencia. Si la suya no aparece aquí, no significa que no podamos ayudar — significa que vale la pena una llamada.
+              Estas son las situaciones por las que los padres nos llaman con mayor frecuencia. Si la suya no aparece aquí, llámenos. Su situación aún puede caer dentro de nuestra práctica.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -150,7 +150,7 @@ export default function HomePageEs() {
           <div className="grid gap-6 md:grid-cols-2">
             {/* TODO: client to provide final testimonials with signed consent forms */}
             <TestimonialCard
-              caseType="IEP — Primaria"
+              caseType="IEP · Primaria"
               quote="Pude hablar con Nicole en español sobre cada detalle del caso de mi hija. Por primera vez sentí que entendía completamente lo que estaba pasando con su educación."
               attribution="Madre de estudiante, Condado de Kern"
             />

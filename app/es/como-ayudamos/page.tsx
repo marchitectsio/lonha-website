@@ -93,7 +93,7 @@ export default function HowWeHelpPageEs() {
           </div>
           <div className="prose-x space-y-5 text-[color:var(--text-primary)] text-lg leading-relaxed">
             <p>
-              Muchas familias trabajan con defensores del IEP — profesionales experimentados que no son abogados, que pueden asistir a reuniones, revisar registros y ayudar a navegar el distrito escolar. Los defensores son una parte legítima y a menudo valiosa del panorama de la educación especial.
+              Muchas familias trabajan con defensores del IEP. Los defensores son profesionales experimentados que no son abogados. Asisten a reuniones, revisan registros y ayudan a las familias a navegar el distrito escolar. Son una parte legítima y a menudo valiosa de la educación especial.
             </p>
             <p>
               Cuando un desacuerdo se escala a una audiencia de proceso de impugnación, a una queja estatal de cumplimiento o a un litigio en tribunal federal, el trabajo debe ser realizado por un abogado con licencia para representarlo en esos procedimientos. Nicole Hodge Amey ha estado haciendo exactamente eso, en California, durante más de veinte años.

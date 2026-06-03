@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "What does an initial consultation cost?",
-    a: "We discuss fees during the first conversation. The initial consultation is a chance for both of us to determine whether we are the right fit. Under IDEA, parents who prevail in a due-process proceeding may recover attorney fees from the school district — this is a real provision of federal law, not a marketing promise.",
+    a: "We discuss fees during the first conversation. The initial consultation is a chance for both of us to determine whether we are the right fit. Under IDEA, parents who prevail in a due-process proceeding may recover attorney fees from the school district. This is a real provision of federal law, not a marketing promise.",
   },
   {
     q: "Do you take cases outside the Bay Area?",

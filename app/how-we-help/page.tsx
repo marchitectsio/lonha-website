@@ -67,7 +67,7 @@ export default function HowWeHelpPage() {
           </div>
           <div className="prose-x space-y-5 text-[color:var(--text-primary)] text-lg leading-relaxed">
             <p>
-              Many families work with IEP advocates — experienced non-attorney professionals who can attend meetings, review records, and help navigate the school district. Advocates are a legitimate and often valuable part of the special-education landscape.
+              Many families work with IEP advocates. Advocates are experienced non-attorney professionals. They attend meetings, review records, and help families navigate the school district. They are a legitimate and often valuable part of special education.
             </p>
             <p>
               When a dispute escalates to a due-process hearing, a state compliance complaint, or federal-court litigation, the work has to be done by an attorney who is licensed to represent you in those proceedings. Nicole Hodge Amey has been doing exactly that, in California, for more than twenty years.

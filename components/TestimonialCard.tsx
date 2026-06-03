@@ -26,7 +26,7 @@ export default function TestimonialCard({ quote, attribution, caseType }: Props)
             {caseType}
           </p>
         )}
-        <p className="text-sm text-[color:var(--text-secondary)]">— {attribution}</p>
+        <p className="text-sm text-[color:var(--text-secondary)]">{attribution}</p>
       </figcaption>
     </figure>
   );

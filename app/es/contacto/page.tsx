@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const FAQ_ES = [
   {
     q: "¿Cuánto cuesta una consulta inicial?",
-    a: "Discutimos las tarifas durante la primera conversación. La consulta inicial es una oportunidad para que ambos determinemos si somos el bufete adecuado. Bajo IDEA, los padres que prevalecen en un procedimiento de proceso de impugnación pueden recuperar honorarios de abogado del distrito escolar — esta es una disposición real de la ley federal, no una promesa de marketing.",
+    a: "Discutimos las tarifas durante la primera conversación. La consulta inicial es una oportunidad para que ambos determinemos si somos el bufete adecuado. Bajo IDEA, los padres que prevalecen en un procedimiento de proceso de impugnación pueden recuperar honorarios de abogado del distrito escolar. Esta es una disposición real de la ley federal, no una promesa de marketing.",
   },
   {
     q: "¿Toman casos fuera del Área de la Bahía?",

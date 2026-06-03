@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lonhaca.com"),
   title: {
-    default: "Law Offices of Nicole Hodge Amey — Special Education Civil Rights",
+    default: "Law Offices of Nicole Hodge Amey · Special Education Civil Rights",
     template: "%s · LONHA",
   },
   description:
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "LONHA — Law Offices of Nicole Hodge Amey",
+    siteName: "LONHA · Law Offices of Nicole Hodge Amey",
   },
   robots: {
     index: true,

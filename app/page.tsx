@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <SiteFrame locale="en" otherLocaleHref="/es">
       <Hero
-        eyebrow="Special Education Civil Rights — Since 2001"
+        eyebrow="Special Education Civil Rights · Since 2001"
         headline="Your child has the right to an education designed for them. We make sure they get it."
         subheadline="The Law Offices of Nicole Hodge Amey represents parents of children with disabilities in IEP disputes, due process hearings, and disability discrimination cases. We have been doing this, and only this, in California for over twenty years."
         primaryCta={{ label: "Schedule a consultation", href: "/contact" }}
@@ -56,7 +56,7 @@ export default function HomePage() {
               Three kinds of cases we take, every week.
             </h2>
             <p className="mt-5 text-lg text-[color:var(--text-primary)] max-w-prose">
-              These are the situations parents call us about most often. If yours does not appear here, that does not mean we cannot help — it means it is worth a phone call.
+              These are the situations parents call us about most often. If yours is not listed, call us. Your situation may still fall within our practice.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -129,12 +129,12 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2">
             {/* TODO: client to provide final testimonials with signed consent forms (Phase 1 §7.2) */}
             <TestimonialCard
-              caseType="IEP — Elementary"
+              caseType="IEP · Elementary"
               quote="After two years of being told our son did not qualify for services, Nicole laid out the law in plain language and gave us a path forward. He has the IEP he should have had all along."
               attribution="Parent of student, Alameda County"
             />
             <TestimonialCard
-              caseType="Due Process — Middle School"
+              caseType="Due Process · Middle School"
               quote="The district treated us like we were exaggerating. Nicole treated us like we were correct. The hearing settled before testimony, with the services we had been asking for from the start."
               attribution="Parent of student, Kern County"
             />

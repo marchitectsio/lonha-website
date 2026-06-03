@@ -25,7 +25,7 @@ export default function AccessibilityPage() {
             Accessibility at LONHA.
           </h1>
           <p className="mt-6 max-w-prose text-lg text-[color:var(--text-primary)] leading-relaxed">
-            A law firm that represents children with disabilities cannot present a website that excludes the population it serves. Web accessibility is not a feature we plan to add — it is the floor.
+            A law firm that represents children with disabilities cannot present a website that excludes the population it serves. Web accessibility is not a feature we plan to add. It is the floor.
           </p>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function AccessibilityPage() {
               <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">
                 Web Content Accessibility Guidelines (WCAG) 2.1 Level AA
               </a>
-              . Several elements — color contrast for body text, error identification on forms, link purpose — meet the higher AAA standard.
+. Several elements meet the higher AAA standard, including color contrast for body text, error identification on forms, and link purpose.
             </p>
           </div>
 

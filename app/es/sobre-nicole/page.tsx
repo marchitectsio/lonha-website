@@ -86,7 +86,7 @@ export default function AboutPageEs() {
                 Durante más de dos décadas, ha manejado cientos de asuntos bajo la Ley de Educación para Individuos con Discapacidades (IDEA), la Sección 504 de la Ley de Rehabilitación y el Título II de la Ley para Estadounidenses con Discapacidades. Sus casos han incluido desacuerdos sobre el IEP, audiencias de proceso de impugnación, quejas ante el Departamento de Educación de California y el Departamento de Educación de los Estados Unidos, audiencias de expulsión y determinación de manifestación, y litigios en tribunales federales.
               </p>
               <p>
-                Nicole es completamente bilingüe en inglés y español. Las consultas, la asistencia a reuniones del IEP y la representación completa del caso pueden conducirse en español — una adaptación que a menudo falta en el mercado legal de educación especial de California y que importa enormemente a las familias del Área de la Bahía Este y del Valle Central.
+                Nicole es completamente bilingüe en inglés y español. Las consultas, la asistencia a reuniones del IEP y la representación completa del caso pueden conducirse en español. Es una adaptación que a menudo falta en el mercado legal de educación especial de California, y que importa enormemente a las familias del Área de la Bahía Este y del Valle Central.
               </p>
               <p>
                 El bufete es miembro del Council of Parent Attorneys and Advocates (COPAA), la organización nacional de membresía para abogados y defensores que representan a estudiantes con discapacidades. La membresía en COPAA conlleva un compromiso explícito con los derechos de padres y estudiantes bajo la ley federal de discapacidad.
@@ -100,7 +100,7 @@ export default function AboutPageEs() {
               >
                 La ley está del lado de su hijo. Mi trabajo es asegurarme de que el distrito lo recuerde.
               </p>
-              <p className="mt-3 text-sm text-[color:var(--text-secondary)]">— Nicole Hodge Amey</p>
+              <p className="mt-3 text-sm text-[color:var(--text-secondary)]">Nicole Hodge Amey</p>
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">

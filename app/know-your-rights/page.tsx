@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Know your rights",
   description:
-    "Plain-language guides for California parents on the IEP process, due process, school discipline, and Section 504 — in English and Spanish.",
+    "Plain-language guides for California parents on the IEP process, due process, school discipline, and Section 504. Available in English and Spanish.",
   alternates: { canonical: "/know-your-rights" },
 };
 
@@ -20,7 +20,7 @@ const RESOURCES = [
     language: "English",
     title: "What belongs in your child's IEP",
     summary:
-      "A walkthrough of the legally required components of an IEP — present levels, goals, services, placement — and the questions to ask when one is missing.",
+      "A walkthrough of the legally required components of an IEP: present levels, goals, services, and placement. Includes the questions to ask when one is missing.",
   },
   {
     id: "due-process-timeline",
@@ -36,7 +36,7 @@ const RESOURCES = [
     language: "English",
     title: "Suspension, expulsion, and manifestation determination",
     summary:
-      "The specific federal protections that apply when a school disciplines a student with a disability — and the timelines that govern each step.",
+      "The specific federal protections that apply when a school disciplines a student with a disability. Includes the timelines that govern each step.",
   },
   {
     id: "derechos-iep",

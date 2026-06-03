@@ -102,7 +102,7 @@ export default function AboutPage() {
               >
                 The law is on your child's side. My job is to make sure the district remembers that.
               </p>
-              <p className="mt-3 text-sm text-[color:var(--text-secondary)]">— Nicole Hodge Amey</p>
+              <p className="mt-3 text-sm text-[color:var(--text-secondary)]">Nicole Hodge Amey</p>
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
