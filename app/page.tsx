@@ -4,15 +4,14 @@ import SiteFrame from "@/components/SiteFrame";
 import Hero from "@/components/Hero";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import PracticeCard from "@/components/PracticeCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import ResourceCard from "@/components/ResourceCard";
 import CTABanner from "@/components/CTABanner";
 import { PRACTICE_AREAS, FEATURED_GUIDES, COVERAGE_AREAS, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Special Education Civil Rights Attorney · Oakland, California",
+  title: "Special Education Attorney · Oakland, California",
   description:
-    "Nicole Hodge Amey represents parents of children with disabilities in IEP disputes, due process hearings, discipline matters, and Section 504 cases across California.",
+    "The Law Offices of Nicole Hodge Amey helps California families with IEP disputes, due process, school discipline, and special-education legal matters.",
   alternates: {
     canonical: "/",
     languages: { en: "/", es: "/es" },
@@ -20,29 +19,51 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  // Show three primary practice areas on the homepage; Section 504 lives on the hub.
   const featuredPractice = PRACTICE_AREAS.slice(0, 3);
 
   return (
     <SiteFrame locale="en" otherLocaleHref="/es">
       <Hero
-        eyebrow="Special Education Civil Rights · Since 2001"
-        headline="Your child has the right to an education designed for them. We make sure they get it."
-        subheadline="The Law Offices of Nicole Hodge Amey represents parents of children with disabilities in IEP disputes, due process hearings, and disability discrimination cases. We have been doing this, and only this, in California for over twenty years."
-        primaryCta={{ label: "Schedule a consultation", href: "/contact" }}
-        secondaryCta={{ label: "Read your rights", href: "/know-your-rights" }}
+        eyebrow="Special Education Law · California"
+        headline="We can help your child get the best education possible."
+        subheadline="The Law Offices of Nicole Hodge Amey helps families focus the conversation on education: evaluations, IEPs, services, due process, and the support a student needs at school. The goal is to help you understand the next right step."
+        primaryCta={{ label: "Contact the firm", href: "/contact" }}
+        secondaryCta={{ label: `Call ${SITE.phone}`, href: `tel:${SITE.phoneRaw}` }}
       />
 
       <CredibilityStrip
         items={[
-          { icon: "Award", label: "COPAA member firm" },
+          { icon: "Award", label: "Special-education focus" },
           { icon: "Scale", label: "Practicing in California since 2001" },
-          { icon: "BadgeCheck", label: "Hundreds of special-ed cases" },
+          { icon: "BadgeCheck", label: "Education-first legal strategy" },
           { icon: "Languages", label: "Consultas en español" },
         ]}
       />
 
-      {/* Practice Areas */}
+      <section className="bg-[color:var(--surface-raised)] border-y border-[color:var(--border-subtle)] py-16 md:py-20">
+        <div className="container-x grid gap-10 md:grid-cols-[1fr_1.6fr] md:gap-16 items-start">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-3">
+              Our focus
+            </p>
+            <h2
+              className="font-serif text-[color:var(--brand-primary)]"
+              style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)", lineHeight: 1.2, fontWeight: 700 }}
+            >
+              The focus is education.
+            </h2>
+          </div>
+          <div className="space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)] max-w-prose">
+            <p>
+              Families usually come to us because something at school is not working: an evaluation was denied, an IEP does not match the student's needs, services are missing, discipline is interfering with learning, or the district is not following through.
+            </p>
+            <p>
+              We keep the focus where it belongs: making sure the student receives the education, services, placement, and support the law requires. If your matter needs legal representation, we explain that path clearly. If the first step is advocacy, training, or consulting, we can help route you to the right place.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[color:var(--surface)] py-16 md:py-section-desktop">
         <div className="container-x">
           <div className="max-w-3xl mb-12 md:mb-16">
@@ -53,10 +74,10 @@ export default function HomePage() {
               className="font-serif text-[color:var(--brand-primary)]"
               style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.441rem)", lineHeight: 1.2, fontWeight: 700 }}
             >
-              Three kinds of cases we take, every week.
+              Legal support for special-education problems.
             </h2>
             <p className="mt-5 text-lg text-[color:var(--text-primary)] max-w-prose">
-              These are the situations parents call us about most often. If yours is not listed, call us. Your situation may still fall within our practice.
+              LONHA handles the legal side of special education: IEP disputes, due process, discipline matters, and disability-rights concerns connected to school. If your situation does not fit neatly into one category, contact us and we will help identify the right next step.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -72,16 +93,41 @@ export default function HomePage() {
           </div>
           <div className="mt-10">
             <Link href="/how-we-help" className="btn btn-secondary">
-              See all practice areas
+              See all legal services
             </Link>
           </div>
         </div>
       </section>
 
-      {/* About Nicole block */}
-      <section className="bg-[color:var(--surface-raised)] border-y border-[color:var(--border-subtle)] py-16 md:py-section-desktop">
+      <section className="bg-[color:var(--surface-raised)] border-y border-[color:var(--border-subtle)] py-16 md:py-20">
+        <div className="container-x grid gap-10 md:grid-cols-[1fr_1.6fr] md:gap-16">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-3">
+              Law firm and advocacy
+            </p>
+            <h2
+              className="font-serif text-[color:var(--brand-primary)]"
+              style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)", lineHeight: 1.2, fontWeight: 700 }}
+            >
+              LONHA and Amey Educational Advocates work in different lanes.
+            </h2>
+          </div>
+          <div className="space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)] max-w-prose">
+            <p>
+              The Law Offices of Nicole Hodge Amey handles legal representation. When a matter requires attorney involvement, that belongs with the law firm.
+            </p>
+            <p>
+              Amey Educational Advocates focuses on advocacy, training, and consulting. If advocacy is the better fit, we can point you toward AEA so your family starts in the right place.
+            </p>
+            <div className="pt-2">
+              <Link href="/contact" className="btn btn-primary">Ask where your situation fits</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[color:var(--surface)] py-16 md:py-section-desktop">
         <div className="container-x grid gap-10 md:gap-16 md:grid-cols-[minmax(0,1fr)_1.4fr] items-center">
-          {/* TODO: Replace with Nicole's professional headshot when client provides it. */}
           <div
             className="portrait-placeholder w-full max-w-sm mx-auto md:mx-0"
             aria-label="Portrait of Nicole Hodge Amey, placeholder pending final photography"
@@ -97,11 +143,10 @@ export default function HomePage() {
               className="font-serif text-[color:var(--brand-primary)] mb-5"
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", lineHeight: 1.2, fontWeight: 700 }}
             >
-              A California civil-rights attorney focused on one thing.
+              A California attorney focused on special education.
             </h2>
-            {/* TODO: client to provide final bio */}
             <p className="text-lg text-[color:var(--text-primary)] leading-relaxed max-w-prose">
-              Nicole Hodge Amey has practiced special-education civil-rights law in California since December 2001, the year she was admitted to the State Bar. Over the years she has represented hundreds of families in IEP disputes, due-process proceedings, discipline matters, and disability-discrimination cases. Consultations and full case representation are available in English and Spanish, so families across the East Bay and the Central Valley can work with her in the language they speak at home.
+              Nicole Hodge Amey has practiced special-education law in California since December 2001, the year she was admitted to the State Bar. Her work centers on helping families address IEP disputes, due-process matters, school discipline concerns, and education-related disability-rights issues. Consultations and full case representation are available in English and Spanish.
             </p>
             <div className="mt-8">
               <Link href="/about" className="btn btn-primary">
@@ -112,42 +157,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="py-16 md:py-section-desktop">
-        <div className="container-x">
-          <div className="max-w-3xl mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
-              From the families we represent
+        <div className="container-x grid gap-10 md:grid-cols-[1fr_1.6fr] md:gap-16">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-3">
+              Privacy first
             </p>
             <h2
               className="font-serif text-[color:var(--brand-primary)]"
               style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.441rem)", lineHeight: 1.2, fontWeight: 700 }}
             >
-              Names withheld. Outcomes documented.
+              The website is here to introduce the firm and help families make contact.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* TODO: client to provide final testimonials with signed consent forms (Phase 1 §7.2) */}
-            <TestimonialCard
-              caseType="IEP · Elementary"
-              quote="After two years of being told our son did not qualify for services, Nicole laid out the law in plain language and gave us a path forward. He has the IEP he should have had all along."
-              attribution="Parent of student, Alameda County"
-            />
-            <TestimonialCard
-              caseType="Due Process · Middle School"
-              quote="The district treated us like we were exaggerating. Nicole treated us like we were correct. The hearing settled before testimony, with the services we had been asking for from the start."
-              attribution="Parent of student, Kern County"
-            />
-          </div>
-          <div className="mt-10">
-            <Link href="/testimonials" className="btn btn-secondary">
-              Read more testimonials
-            </Link>
+          <div className="space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)] max-w-prose">
+            <p>
+              Some legal matters become public record. Even then, the focus of this website is not to broadcast prior matters or turn family stories into marketing.
+            </p>
+            <p>
+              The site is here to explain the kinds of education issues we handle and make it easy for families to reach the firm when they need help.
+            </p>
+            <div className="pt-2">
+              <Link href="/contact" className="btn btn-secondary">Start with contact</Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Geographic coverage */}
       <section className="bg-[color:var(--surface)] border-y border-[color:var(--border-subtle)] py-14 md:py-20">
         <div className="container-x grid gap-8 md:grid-cols-[1fr_1.4fr] md:gap-16 items-start">
           <div>
@@ -174,7 +210,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Resource preview */}
       <section className="py-16 md:py-section-desktop">
         <div className="container-x">
           <div className="max-w-3xl mb-12">
@@ -185,7 +220,7 @@ export default function HomePage() {
               className="font-serif text-[color:var(--brand-primary)]"
               style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.441rem)", lineHeight: 1.2, fontWeight: 700 }}
             >
-              Plain-language guides for parents, in English and Spanish.
+              Basic information for parents, in English and Spanish.
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -204,10 +239,10 @@ export default function HomePage() {
       </section>
 
       <CTABanner
-        eyebrow="Talk with us"
-        heading="Tell us about your child's situation."
-        body="We respond within 24 business hours. There is no cost to ask whether we are the right fit for your case."
-        primaryCta={{ label: "Schedule a consultation", href: "/contact" }}
+        eyebrow="We can help"
+        heading="Tell us what is happening at school."
+        body="We respond within 24 business hours. The first step is helping you understand whether the matter belongs with the law firm, advocacy support, or another resource."
+        primaryCta={{ label: "Contact the firm", href: "/contact" }}
         secondaryCallLabel={`Call ${SITE.phone}`}
       />
     </SiteFrame>
