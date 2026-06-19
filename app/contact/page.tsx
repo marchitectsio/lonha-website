@@ -13,8 +13,12 @@ export const metadata: Metadata = {
 
 const FAQ = [
   {
+    q: "Do I need to know the exact legal issue before contacting you?",
+    a: "No. You can start by explaining what is happening at school. We can help identify whether the concern involves an IEP, due process, discipline, Section 504, advocacy support, or another next step.",
+  },
+  {
     q: "What does an initial consultation cost?",
-    a: "We discuss fees during the first conversation. The initial consultation is a chance for both of us to determine whether we are the right fit. Under IDEA, parents who prevail in a due-process proceeding may recover attorney fees from the school district. This is a real provision of federal law, not a marketing promise.",
+    a: "We discuss fees during the first conversation. The initial consultation is a chance for both of us to determine whether the firm is the right fit. Under IDEA, parents who prevail in a due-process proceeding may recover attorney fees from the school district. This is a real provision of federal law, not a marketing promise.",
   },
   {
     q: "Do you take cases outside the Bay Area?",
@@ -26,7 +30,7 @@ const FAQ = [
   },
   {
     q: "How do I prepare for our first call?",
-    a: "Have your child's most recent IEP, any assessment reports, and a summary of what has happened with the school district. You do not need anything else to start.",
+    a: "If you have them, gather your child's most recent IEP, assessment reports, and a short summary of what has happened with the school district. You do not need everything ready before you make first contact.",
   },
 ];
 
@@ -42,23 +46,21 @@ export default function ContactPage() {
             className="font-serif font-bold text-[color:var(--brand-primary)] max-w-3xl"
             style={{ fontSize: "clamp(2rem, 4.4vw, 3.052rem)", lineHeight: 1.15 }}
           >
-            Tell us about your child's situation.
+            Tell us what is happening at school.
           </h1>
           <p className="mt-5 text-lg text-[color:var(--text-primary)] max-w-prose leading-relaxed">
-            We respond to every message within 24 business hours. If the matter is urgent, please call us.
+            You do not need to know the exact legal language before you reach out. Share the basic situation, and we will help identify whether the matter belongs with legal representation, advocacy support, or another resource.
           </p>
         </div>
       </section>
 
       <section className="py-10 md:py-16">
         <div className="container-x grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
-          {/* Form */}
           <div>
             <h2 className="sr-only">Contact form</h2>
             <ContactForm locale="en" />
           </div>
 
-          {/* Side info */}
           <aside aria-labelledby="contact-info" className="space-y-8">
             <div>
               <h2 id="contact-info" className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
@@ -115,7 +117,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="bg-[color:var(--surface-raised)] border-t border-[color:var(--border-subtle)] py-12 md:py-20">
         <div className="container-x">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-3">
