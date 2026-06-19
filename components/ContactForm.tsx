@@ -108,23 +108,32 @@ export default function ContactForm({ locale }: Props) {
     const found = validate(form);
     if (Object.keys(found).length > 0) {
       setErrors(found);
-      // Move focus to the error summary so screen reader users hear what's wrong.
       setTimeout(() => errorSummaryRef.current?.focus(), 0);
       return;
     }
+
     setErrors({});
     setSubmitting(true);
+
     try {
-      // TODO: wire to firm intake CRM or email service.
-      // For now this simulates a successful submission so the accessible
-      // success state can be tested. Replace with a real endpoint before launch.
-      await new Promise((resolve) => setTimeout(resolve, 600));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: new FormData(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Contact submission failed");
+      }
+
       setSubmitted(true);
-      // Focus the success heading after render so the announcement is clear.
+      form.reset();
+      setMessageLength(0);
       setTimeout(() => successHeadingRef.current?.focus(), 0);
     } catch {
-      // Submission error — show generic message
-      setErrors({ name: locale === "es" ? "Algo salió mal. Por favor intente de nuevo." : "Something went wrong. Please try again." });
+      setErrors({
+        name: locale === "es" ? "Algo salió mal. Por favor intente de nuevo." : "Something went wrong. Please try again.",
+      });
+      setTimeout(() => errorSummaryRef.current?.focus(), 0);
     } finally {
       setSubmitting(false);
     }
