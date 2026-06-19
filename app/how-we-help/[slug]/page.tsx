@@ -60,7 +60,6 @@ export default async function PracticeAreaPage({
         </div>
       </section>
 
-      {/* When to call */}
       <section className="py-12 md:py-20 border-t border-[color:var(--border-subtle)]">
         <div className="container-x grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">
           <div>
@@ -89,7 +88,6 @@ export default async function PracticeAreaPage({
         </div>
       </section>
 
-      {/* Process */}
       <section className="bg-[color:var(--surface-raised)] border-y border-[color:var(--border-subtle)] py-12 md:py-20">
         <div className="container-x">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-3">
@@ -117,35 +115,33 @@ export default async function PracticeAreaPage({
         </div>
       </section>
 
-      {/* Anonymized case result */}
       <section className="py-12 md:py-20">
-        <div className="container-x">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-3">
-            Representative case
-          </p>
-          <h2
-            className="font-serif text-[color:var(--brand-primary)] mb-8"
-            style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)", lineHeight: 1.2, fontWeight: 700 }}
-          >
-            One example. Names withheld.
-          </h2>
-          {/* TODO: client to provide additional anonymized case results */}
-          <article className="card border-l-4 border-l-[color:var(--brand-accent)] max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[color:var(--brand-secondary)] mb-3">
-              {content.caseResult.caseType}
+        <div className="container-x grid gap-8 md:grid-cols-[1fr_1.6fr] md:gap-16">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-3">
+              Privacy first
             </p>
-            <p className="text-lg leading-relaxed text-[color:var(--text-primary)]">
-              {content.caseResult.body}
+            <h2
+              className="font-serif text-[color:var(--brand-primary)]"
+              style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)", lineHeight: 1.2, fontWeight: 700 }}
+            >
+              Start with basic information.
+            </h2>
+          </div>
+          <div className="space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)] max-w-prose">
+            <p>
+              You do not need to know the legal language before you contact the firm. Tell us what is happening at school, and we can help identify whether the issue belongs with legal representation, advocacy support, or another resource.
             </p>
-            <p className="mt-4 text-sm text-[color:var(--text-secondary)]">{content.caseResult.geo}</p>
-          </article>
-          <p className="mt-5 max-w-prose text-sm text-[color:var(--text-secondary)]">
-            Case summaries on this site omit any combination of facts that could identify a student, consistent with the Family Educational Rights and Privacy Act.
-          </p>
+            <p>
+              Please avoid sending private student details through the form. We can ask for documents and additional information after the first contact.
+            </p>
+            <Link href="/contact" className="btn btn-secondary">
+              Contact the firm
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Related resources */}
       <section className="bg-[color:var(--surface)] border-y border-[color:var(--border-subtle)] py-12 md:py-20">
         <div className="container-x">
           <h2
@@ -173,7 +169,7 @@ export default async function PracticeAreaPage({
       <CTABanner
         heading="Think this matches your situation?"
         body="Tell us briefly what is happening. We respond within 24 business hours."
-        primaryCta={{ label: "Schedule a consultation", href: "/contact" }}
+        primaryCta={{ label: "Contact the firm", href: "/contact" }}
         secondaryCallLabel={`Call ${SITE.phone}`}
       />
     </SiteFrame>
