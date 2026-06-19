@@ -15,7 +15,7 @@ const NAV_EN: NavItem[] = [
   { href: "/about", label: "About" },
   { href: "/how-we-help", label: "How we help" },
   { href: "/know-your-rights", label: "Know your rights" },
-  { href: "/testimonials", label: "Testimonials" },
+  { href: "/testimonials", label: "Privacy" },
   { href: "/contact", label: "Contact" },
 ];
 
