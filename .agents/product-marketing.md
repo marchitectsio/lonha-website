@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v1
+**Document version:** v2
 **Last updated:** 2026-07-26
 
 ## Product Overview
@@ -113,6 +113,9 @@ Not applicable in the standard B2B sense — this is a single-persona B2C legal 
 **Conversion action:** Submit the contact form or call the firm directly (`/contact`, click-to-call).
 **Current metrics:** None yet — site is a production-ready scaffold awaiting final client content (attorney bio, testimonials, headshot, resource-hub guides) per README "Status" section. No live payment feature; payment-workflow research (Stripe/CaseFox) is still open per docs/ty-amey-call-actions.md and should not be treated as a marketing lever yet.
 
+**Infrastructure/vendors:** LONHA is a customer of Social Following Studios (SFS) via Marchitects for email/marketing infrastructure (ESP, CRM/funnel routing, automation) if and when LONHA adopts it — not yet confirmed as live for this site. Skills touching email, CRM, or lead routing (`/emails`, `/revops`, `/analytics`) should check `docs/social-following-studios-context.md` for what that infrastructure can do before assuming a from-scratch build. SFS is a vendor relationship, not part of LONHA's own positioning — do not blend SFS's ESP/infrastructure company messaging into LONHA's law-firm copy.
+
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v2 (2026-07-26) — Added infrastructure/vendor note (Social Following Studios via Marchitects) pointing to docs/social-following-studios-context.md; no repositioning.
 - v1 (2026-07-26) — Initial context, auto-drafted from README, package.json, app/page.tsx, app/about/page.tsx, lib/site.ts, docs/phase1_research_brief.md, and docs/ty-amey-call-notes.md / ty-amey-call-actions.md.
