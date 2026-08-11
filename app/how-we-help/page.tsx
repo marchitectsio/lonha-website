@@ -69,13 +69,14 @@ export default function HowWeHelpPage() {
               LONHA is the law firm. If the matter requires attorney involvement, due process, or legal representation, it belongs with the Law Offices of Nicole Hodge Amey.
             </p>
             <p>
-              Amey Educational Advocates focuses on advocacy, training, and consulting. If the issue is better suited for advocacy support, the site should route the family toward AEA once that website link is ready.
+              Amey Educational Advocates focuses on advocacy, training, and consulting. If the issue is better suited for advocacy support, families can learn more on the AEA website.
             </p>
             <p>
               If you are not sure which path fits, start with contact. We can help identify whether the matter belongs with LONHA, AEA, or another resource.
             </p>
             <div className="pt-2">
-              <Link href="/contact" className="btn btn-primary">Ask where your situation fits</Link>
+              <a href="https://ameyed.com/" target="_blank" rel="noreferrer" className="btn btn-secondary">Visit AEA</a>
+              <Link href="/contact" className="btn btn-primary ml-0 sm:ml-3 mt-3 sm:mt-0">Ask where your situation fits</Link>
             </div>
           </div>
         </div>

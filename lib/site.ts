@@ -5,7 +5,7 @@ export const SITE = {
   abbrev: "LONHA",
   phone: "(510) 479-0003",
   phoneRaw: "+15104790003",
-  email: "nicole.amey@lonhaca.com",
+  email: "hodgelaw@gmail.com",
   address: {
     line1: "P.O. Box 5100",
     cityStateZip: "Oakland, CA 94605",
@@ -28,6 +28,8 @@ export const PATH_PAIRS: Record<string, string> = {
   "/about": "/es/sobre-nicole",
   "/how-we-help": "/es/como-ayudamos",
   "/contact": "/es/contacto",
+  "/know-your-rights": "/es/recursos",
+  "/privacy": "/es/privacidad",
 };
 
 export const REVERSE_PATH_PAIRS: Record<string, string> = Object.fromEntries(

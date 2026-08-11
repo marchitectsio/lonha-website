@@ -18,7 +18,7 @@ const FAQ = [
   },
   {
     q: "What does an initial consultation cost?",
-    a: "We discuss fees during the first conversation. The initial consultation is a chance for both of us to determine whether the firm is the right fit. Under IDEA, parents who prevail in a due-process proceeding may recover attorney fees from the school district. This is a real provision of federal law, not a marketing promise.",
+    a: "Fees and the scope of any proposed work are discussed before representation begins. Contacting the firm is not a guarantee that the firm will accept the matter.",
   },
   {
     q: "Do you take cases outside the Bay Area?",
@@ -26,7 +26,7 @@ const FAQ = [
   },
   {
     q: "Habla español?",
-    a: "Yes. Nicole Hodge Amey is fully bilingual in English and Spanish. Consultations, IEP-meeting attendance, and complete case representation are all available in Spanish.",
+    a: "Spanish-language assistance is available. Indicate your preferred language when you contact the firm.",
   },
   {
     q: "How do I prepare for our first call?",
@@ -61,7 +61,7 @@ export default function ContactPage() {
             <ContactForm locale="en" />
           </div>
 
-          <aside aria-labelledby="contact-info" className="space-y-8">
+          <aside id="contact-direct" aria-labelledby="contact-info" className="space-y-8">
             <div>
               <h2 id="contact-info" className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
                 Direct contact
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 Consultas en español
               </p>
               <p className="text-[0.9375rem] text-[color:var(--text-primary)] leading-relaxed">
-                Nicole Hodge Amey atiende consultas y representa familias en español. Si prefiere comunicarse en español, indíquelo en el formulario.
+                Hay asistencia disponible en español. Si prefiere comunicarse en español, indíquelo en el formulario.
               </p>
             </div>
 

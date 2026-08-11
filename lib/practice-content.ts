@@ -5,7 +5,6 @@ export type PracticeContent = {
   lead: string;
   whenToCall: string[];
   process: { heading: string; body: string }[];
-  caseResult: { caseType: string; body: string; geo: string };
   relatedResources: { title: string; href: string }[];
 };
 
@@ -41,13 +40,8 @@ export const PRACTICE_CONTENT: Record<string, PracticeContent> = {
         body: "Winning a settlement or order is not the end. We follow up to make sure the services the district agreed to actually appear in the classroom.",
       },
     ],
-    caseResult: {
-      caseType: "IEP Denial — Elementary",
-      body: "Represented a family after the district denied a special-education evaluation for three consecutive school years despite documented learning differences. Following a written demand and mediation, the district agreed to a full evaluation, an appropriate IEP, and compensatory services.",
-      geo: "Alameda County · 2020–2022",
-    },
     relatedResources: [
-      { title: "What belongs in your child's IEP", href: "/know-your-rights#iep-basics" },
+      { title: "Official special-education resources", href: "/know-your-rights" },
       { title: "Requesting an evaluation in writing", href: "/know-your-rights" },
     ],
   },
@@ -71,13 +65,8 @@ export const PRACTICE_CONTENT: Record<string, PracticeContent> = {
       { heading: "4. Hearing preparation", body: "Witness preparation, document exhibits, expert reports, and a clear theory of the case." },
       { heading: "5. Hearing and decision", body: "We present the case to the administrative law judge and pursue the remedies your child is entitled to under federal law." },
     ],
-    caseResult: {
-      caseType: "Due Process — Middle School",
-      body: "Filed for due process after the district refused to fund an appropriate non-public school placement. The matter settled before testimony, with the district agreeing to placement and compensatory educational services.",
-      geo: "Kern County · 2021",
-    },
     relatedResources: [
-      { title: "The due-process timeline, from filing to hearing", href: "/know-your-rights#due-process-timeline" },
+      { title: "Official due-process resources", href: "/know-your-rights" },
       { title: "When mediation makes sense, and when it does not", href: "/know-your-rights" },
     ],
   },
@@ -100,11 +89,6 @@ export const PRACTICE_CONTENT: Record<string, PracticeContent> = {
       { heading: "3. Expulsion hearing", body: "We represent your child at the expulsion hearing, where the procedural rules are different from a courtroom but the consequences for your child are real." },
       { heading: "4. Reinstatement and appeal", body: "If the result is wrong, we pursue appeal at the district, county, and state level — and into court when warranted." },
     ],
-    caseResult: {
-      caseType: "Expulsion Defense — High School",
-      body: "Represented a student facing expulsion for conduct directly related to an unidentified disability. The manifestation-determination review was reopened, the expulsion was withdrawn, and the district funded an independent evaluation that led to an appropriate IEP.",
-      geo: "Los Angeles County · 2023",
-    },
     relatedResources: [
       { title: "Manifestation determinations in plain language", href: "/know-your-rights" },
       { title: "Your child's right to stay-put", href: "/know-your-rights" },
@@ -129,11 +113,6 @@ export const PRACTICE_CONTENT: Record<string, PracticeContent> = {
       { heading: "3. Office for Civil Rights complaint", body: "Where appropriate, we file with the U.S. Department of Education Office for Civil Rights, which can investigate and order corrective action." },
       { heading: "4. Federal litigation", body: "Section 504 and Title II claims can be brought in federal court. We pursue litigation when the remedies require it." },
     ],
-    caseResult: {
-      caseType: "Section 504 — Discrimination",
-      body: "Represented a student excluded from a school program because of a documented disability. A Section 504 complaint and OCR involvement led to reinstatement and a written non-discrimination commitment from the district.",
-      geo: "Alameda County · 2022",
-    },
     relatedResources: [
       { title: "Is your child a 504 or an IEP student?", href: "/know-your-rights" },
       { title: "How OCR complaints work", href: "/know-your-rights" },

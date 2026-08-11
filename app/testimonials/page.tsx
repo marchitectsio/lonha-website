@@ -8,12 +8,13 @@ export const metadata: Metadata = {
   title: "Privacy-First Representation",
   description:
     "The Law Offices of Nicole Hodge Amey keeps the focus on education, contact, and privacy instead of publishing client stories as marketing.",
-  alternates: { canonical: "/testimonials" },
+  alternates: { canonical: "/privacy" },
+  robots: { index: false, follow: true },
 };
 
 export default function TestimonialsPage() {
   return (
-    <SiteFrame locale="en" otherLocaleHref="/es">
+    <SiteFrame locale="en" otherLocaleHref="/es/privacidad">
       <section className="bg-[color:var(--surface)] py-14 md:py-section-desktop">
         <div className="container-x">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">

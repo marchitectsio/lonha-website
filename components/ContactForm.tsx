@@ -4,7 +4,7 @@ import { FormEvent, useRef, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
 type Locale = "en" | "es";
-type Errors = Partial<Record<"name" | "phone" | "email" | "message" | "consent", string>>;
+type Errors = Partial<Record<"name" | "phone" | "email" | "message" | "consent" | "form", string>>;
 
 const COPY = {
   en: {
@@ -130,9 +130,7 @@ export default function ContactForm({ locale }: Props) {
       setMessageLength(0);
       setTimeout(() => successHeadingRef.current?.focus(), 0);
     } catch {
-      setErrors({
-        name: locale === "es" ? "Algo salió mal. Por favor intente de nuevo." : "Something went wrong. Please try again.",
-      });
+      setErrors({ form: locale === "es" ? "No se pudo enviar el mensaje. Llame o envíe un correo directamente." : "The message could not be sent. Please call or email the firm directly." });
       setTimeout(() => errorSummaryRef.current?.focus(), 0);
     } finally {
       setSubmitting(false);
@@ -184,7 +182,7 @@ export default function ContactForm({ locale }: Props) {
           <ul className="list-disc pl-5 space-y-1">
             {errorList.map(([field, msg]) => (
               <li key={field}>
-                <a href={`#field-${field}`} className="text-[color:var(--link)]">
+                <a href={field === "form" ? "#contact-direct" : `#field-${field}`} className="text-[color:var(--link)]">
                   {msg}
                 </a>
               </li>
@@ -194,6 +192,10 @@ export default function ContactForm({ locale }: Props) {
       )}
 
       <div className="grid gap-6">
+        <div className="sr-only" aria-hidden="true">
+          <label htmlFor="field-website">Website</label>
+          <input id="field-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+        </div>
         <Field
           id="name"
           name="name"

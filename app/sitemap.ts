@@ -14,12 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/how-we-help/discipline-expulsion",
     "/how-we-help/section-504",
     "/know-your-rights",
-    "/testimonials",
+    "/privacy",
     "/contact",
     "/accessibility",
     "/es",
     "/es/sobre-nicole",
     "/es/como-ayudamos",
+    "/es/recursos",
+    "/es/privacidad",
     "/es/contacto",
   ];
   return pages.map((p) => ({
