@@ -5,8 +5,8 @@ export async function POST(request: Request) {
 
   if (!webhookUrl) {
     return NextResponse.json(
-      { ok: false, error: "Contact webhook is not configured." },
-      { status: 500 },
+      { ok: false, error: "Contact webhook is not configured; use email fallback." },
+      { status: 503 },
     );
   }
 
