@@ -18,15 +18,17 @@ export default function Header({ locale, navItems, otherLocaleHref }: Props) {
   const [open, setOpen] = useState(false);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const openBtnRef = useRef<HTMLButtonElement | null>(null);
+  const hasOpenedRef = useRef(false);
 
   // Focus management for the mobile drawer
   useEffect(() => {
     if (open) {
+      hasOpenedRef.current = true;
       document.body.style.overflow = "hidden";
       closeBtnRef.current?.focus();
     } else {
       document.body.style.overflow = "";
-      openBtnRef.current?.focus();
+      if (hasOpenedRef.current) openBtnRef.current?.focus();
     }
     return () => {
       document.body.style.overflow = "";

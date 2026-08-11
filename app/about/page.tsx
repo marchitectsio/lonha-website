@@ -3,7 +3,8 @@ import Link from "next/link";
 import SiteFrame from "@/components/SiteFrame";
 import CTABanner from "@/components/CTABanner";
 import { SITE } from "@/lib/site";
-import { BadgeCheck, Languages, Scale } from "lucide-react";
+import { Languages, Scale } from "lucide-react";
+import AttorneyProfileCard from "@/components/AttorneyProfileCard";
 
 export const metadata: Metadata = {
   title: "About Nicole Hodge Amey",
@@ -17,13 +18,7 @@ export default function AboutPage() {
     <SiteFrame locale="en" otherLocaleHref="/es/sobre-nicole">
       <section className="bg-[color:var(--surface)] py-16 md:py-section-desktop">
         <div className="container-x grid gap-10 md:grid-cols-[1fr_1.2fr] md:gap-16 items-start">
-          <div
-            className="portrait-placeholder w-full max-w-md"
-            aria-label="Portrait of Nicole Hodge Amey, placeholder pending final photography"
-            style={{ fontSize: "clamp(6rem, 16vw, 10rem)" }}
-          >
-            N
-          </div>
+          <AttorneyProfileCard locale="en" className="w-full max-w-md" />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
               About
@@ -55,21 +50,14 @@ export default function AboutPage() {
                 <Scale aria-hidden="true" className="h-5 w-5 mt-1 text-[color:var(--brand-secondary)]" strokeWidth={1.5} />
                 <div>
                   <dt className="font-semibold">Bar admission</dt>
-                  <dd>California State Bar #{SITE.bar.number}<br />Admitted {SITE.bar.admittedFull}</dd>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <BadgeCheck aria-hidden="true" className="h-5 w-5 mt-1 text-[color:var(--brand-secondary)]" strokeWidth={1.5} />
-                <div>
-                  <dt className="font-semibold">Membership</dt>
-                  <dd>Council of Parent Attorneys and Advocates (COPAA)</dd>
+                  <dd><a href="https://apps.calbar.ca.gov/attorney/Licensee/Detail/215157" target="_blank" rel="noreferrer">California State Bar #{SITE.bar.number}<span className="sr-only"> (opens in a new tab)</span></a><br />Admitted {SITE.bar.admittedFull}</dd>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Languages aria-hidden="true" className="h-5 w-5 mt-1 text-[color:var(--brand-secondary)]" strokeWidth={1.5} />
                 <div>
                   <dt className="font-semibold">Languages</dt>
-                  <dd>English, Español</dd>
+                  <dd>English; Spanish-language assistance available</dd>
                 </div>
               </div>
             </dl>
@@ -78,16 +66,13 @@ export default function AboutPage() {
           <div className="prose-x">
             <div className="space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)]">
               <p>
-                Nicole Hodge Amey founded the Law Offices of Nicole Hodge Amey to help parents of children with disabilities navigate California public schools when the education process breaks down. The firm focuses on special-education legal issues, including IEP disputes, due-process matters, school discipline concerns, and education-related disability-rights questions.
+                Nicole Hodge Amey founded the Law Offices of Nicole Hodge Amey to help parents of children with disabilities navigate California public schools when the education process breaks down. The firm addresses special-education legal issues, including IEP disputes, due-process matters, school discipline concerns, and education-related disability-rights questions.
               </p>
               <p>
                 The work is not centered on promising large settlements. The focus is educational: helping families understand what their child needs, what the law requires, and what next step may move the school district toward an appropriate plan.
               </p>
               <p>
-                Nicole is fully bilingual in English and Spanish. Consultations, IEP-meeting attendance, and complete case representation can be conducted in Spanish, which allows more families to understand the process in the language they use at home.
-              </p>
-              <p>
-                The firm is a member of the Council of Parent Attorneys and Advocates (COPAA), the national membership organization for attorneys and advocates who represent students with disabilities.
+                Nicole was born and raised in Oakland. She attended Merritt College, earned a bachelor&apos;s degree in Political Science from California State University, Long Beach, and earned her J.D. from Golden Gate University School of Law. Spanish-language assistance is available for families who prefer it.
               </p>
             </div>
 

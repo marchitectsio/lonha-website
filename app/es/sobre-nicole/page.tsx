@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteFrame from "@/components/SiteFrame";
 import CTABanner from "@/components/CTABanner";
 import { SITE } from "@/lib/site";
-import { BadgeCheck, Languages, Scale } from "lucide-react";
+import { Languages, Scale } from "lucide-react";
+import AttorneyProfileCard from "@/components/AttorneyProfileCard";
 
 export const metadata: Metadata = {
   title: "Sobre Nicole Hodge Amey",
   description:
-    "Nicole Hodge Amey es una abogada de derechos civiles en California enfocada exclusivamente en educación especial. Admitida al Colegio Estatal de Abogados en 2001; miembro de COPAA; completamente bilingüe en inglés y español.",
+    "Nicole Hodge Amey es una abogada de California que ayuda a familias con asuntos de educación especial. Admitida al Colegio Estatal de Abogados en 2001.",
   alternates: { canonical: "/es/sobre-nicole", languages: { en: "/about", es: "/es/sobre-nicole" } },
 };
 
@@ -17,14 +18,7 @@ export default function AboutPageEs() {
     <SiteFrame locale="es" otherLocaleHref="/about">
       <section className="bg-[color:var(--surface)] py-16 md:py-section-desktop">
         <div className="container-x grid gap-10 md:grid-cols-[1fr_1.2fr] md:gap-16 items-start">
-          {/* TODO: Replace with Nicole's professional headshot when client provides it. */}
-          <div
-            className="portrait-placeholder w-full max-w-md"
-            aria-label="Retrato de Nicole Hodge Amey, marcador de posición pendiente de fotografía final"
-            style={{ fontSize: "clamp(6rem, 16vw, 10rem)" }}
-          >
-            N
-          </div>
+          <AttorneyProfileCard locale="es" className="w-full max-w-md" />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
               Sobre
@@ -39,7 +33,7 @@ export default function AboutPageEs() {
               className="mt-5 text-[color:var(--text-primary)] max-w-prose"
               style={{ fontSize: "1.1875rem", lineHeight: 1.6 }}
             >
-              Una abogada de derechos civiles en California cuya práctica se ha limitado a la ley de educación especial y derechos por discapacidad desde el año en que fue admitida al Colegio de Abogados.
+              Una abogada de California que ayuda a las familias a entender sus derechos y buscar la educación, los servicios y el apoyo que sus hijos necesitan en la escuela.
             </p>
           </div>
         </div>
@@ -56,40 +50,29 @@ export default function AboutPageEs() {
                 <Scale aria-hidden="true" className="h-5 w-5 mt-1 text-[color:var(--brand-secondary)]" strokeWidth={1.5} />
                 <div>
                   <dt className="font-semibold">Admisión al Colegio de Abogados</dt>
-                  <dd>Colegio Estatal de Abogados de California #{SITE.bar.number}<br />Admitida en {SITE.bar.admittedFull}</dd>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <BadgeCheck aria-hidden="true" className="h-5 w-5 mt-1 text-[color:var(--brand-secondary)]" strokeWidth={1.5} />
-                <div>
-                  <dt className="font-semibold">Membresía</dt>
-                  <dd>Council of Parent Attorneys and Advocates (COPAA)</dd>
+                  <dd><a href="https://apps.calbar.ca.gov/attorney/Licensee/Detail/215157" target="_blank" rel="noreferrer">Colegio Estatal de Abogados de California #{SITE.bar.number}<span className="sr-only"> (se abre en una nueva pestaña)</span></a><br />Admitida en {SITE.bar.admittedFull}</dd>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Languages aria-hidden="true" className="h-5 w-5 mt-1 text-[color:var(--brand-secondary)]" strokeWidth={1.5} />
                 <div>
                   <dt className="font-semibold">Idiomas</dt>
-                  <dd>English, Español</dd>
+                  <dd>Inglés; asistencia disponible en español</dd>
                 </div>
               </div>
             </dl>
           </aside>
 
           <div className="prose-x">
-            {/* TODO: client to provide final bio */}
             <div className="space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)]">
               <p>
-                Nicole Hodge Amey fundó la Oficina Legal de Nicole Hodge Amey para hacer una cosa bien: representar a padres de niños con discapacidades en sus tratos con las escuelas públicas de California. Su práctica se ha limitado a la ley de educación especial y derechos por discapacidad desde diciembre de 2001, el año en que fue admitida al Colegio Estatal de Abogados de California.
+                Nicole Hodge Amey fundó la Oficina Legal de Nicole Hodge Amey para ayudar a padres de niños con discapacidades a navegar las escuelas públicas de California cuando el proceso educativo no funciona. El bufete atiende desacuerdos sobre el IEP, asuntos de proceso debido, disciplina escolar y preguntas sobre derechos relacionados con discapacidades.
               </p>
               <p>
-                Durante más de dos décadas, ha manejado cientos de asuntos bajo la Ley de Educación para Individuos con Discapacidades (IDEA), la Sección 504 de la Ley de Rehabilitación y el Título II de la Ley para Estadounidenses con Discapacidades. Sus casos han incluido desacuerdos sobre el IEP, audiencias de proceso de impugnación, quejas ante el Departamento de Educación de California y el Departamento de Educación de los Estados Unidos, audiencias de expulsión y determinación de manifestación, y litigios en tribunales federales.
+                El trabajo se centra en la educación: ayudar a las familias a entender qué necesita el estudiante, qué exige la ley y cuál puede ser el próximo paso apropiado con el distrito escolar.
               </p>
               <p>
-                Nicole es completamente bilingüe en inglés y español. Las consultas, la asistencia a reuniones del IEP y la representación completa del caso pueden conducirse en español. Es una adaptación que a menudo falta en el mercado legal de educación especial de California, y que importa enormemente a las familias del Área de la Bahía Este y del Valle Central.
-              </p>
-              <p>
-                El bufete es miembro del Council of Parent Attorneys and Advocates (COPAA), la organización nacional de membresía para abogados y defensores que representan a estudiantes con discapacidades. La membresía en COPAA conlleva un compromiso explícito con los derechos de padres y estudiantes bajo la ley federal de discapacidad.
+                Nicole nació y creció en Oakland. Estudió en Merritt College, obtuvo una licenciatura en Ciencias Políticas de California State University, Long Beach, y su J.D. de Golden Gate University School of Law. Hay asistencia disponible en español.
               </p>
             </div>
 
@@ -98,9 +81,9 @@ export default function AboutPageEs() {
                 className="font-serif italic text-[color:var(--brand-primary)]"
                 style={{ fontSize: "1.375rem", lineHeight: 1.5 }}
               >
-                La ley está del lado de su hijo. Mi trabajo es asegurarme de que el distrito lo recuerde.
+                Podemos ayudar a su familia a mantener el enfoque en lo que su hijo necesita para recibir la mejor educación posible.
               </p>
-              <p className="mt-3 text-sm text-[color:var(--text-secondary)]">Nicole Hodge Amey</p>
+              <p className="mt-3 text-sm text-[color:var(--text-secondary)]">Oficina Legal de Nicole Hodge Amey</p>
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">

@@ -4,8 +4,8 @@ import SiteFrame from "@/components/SiteFrame";
 import Hero from "@/components/Hero";
 import CredibilityStrip from "@/components/CredibilityStrip";
 import PracticeCard from "@/components/PracticeCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import CTABanner from "@/components/CTABanner";
+import AttorneyProfileCard from "@/components/AttorneyProfileCard";
 import { PRACTICE_AREAS, COVERAGE_AREAS, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -43,18 +43,18 @@ export default function HomePageEs() {
   return (
     <SiteFrame locale="es" otherLocaleHref="/">
       <Hero
-        eyebrow="Derechos civiles en educación especial · Desde 2001"
-        headline="Su hijo tiene derecho a una educación diseñada para él. Nosotros nos aseguramos de que la reciba."
-        subheadline="La Oficina Legal de Nicole Hodge Amey representa a padres de niños con discapacidades en desacuerdos sobre el IEP, audiencias de proceso de impugnación y casos de discriminación por discapacidad. Llevamos más de veinte años haciendo esto, y solo esto, en California."
-        primaryCta={{ label: "Programe una consulta", href: "/es/contacto" }}
-        secondaryCta={{ label: "Conozca sus derechos", href: "/know-your-rights" }}
+        eyebrow="Ley de educación especial · California"
+        headline="Podemos ayudar a que su hijo reciba la mejor educación posible."
+        subheadline="La Oficina Legal de Nicole Hodge Amey ayuda a las familias con evaluaciones, IEP, servicios, proceso debido y otros apoyos escolares. El primer paso es entender qué camino corresponde a su situación."
+        primaryCta={{ label: "Contacte al bufete", href: "/es/contacto" }}
+        secondaryCta={{ label: "Conozca sus derechos", href: "/es/recursos" }}
       />
 
       <CredibilityStrip
         items={[
-          { icon: "Award", label: "Bufete miembro de COPAA" },
+          { icon: "Award", label: "Enfoque en educación especial" },
           { icon: "Scale", label: "Ejerciendo en California desde 2001" },
-          { icon: "BadgeCheck", label: "Cientos de casos de educación especial" },
+          { icon: "BadgeCheck", label: "Estrategia centrada en la educación" },
           { icon: "Languages", label: "Consultas en español" },
         ]}
       />
@@ -70,7 +70,7 @@ export default function HomePageEs() {
               className="font-serif text-[color:var(--brand-primary)]"
               style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.441rem)", lineHeight: 1.2, fontWeight: 700 }}
             >
-              Tres tipos de casos que tomamos cada semana.
+              Apoyo legal para problemas de educación especial.
             </h2>
             <p className="mt-5 text-lg text-[color:var(--text-primary)] max-w-prose">
               Estas son las situaciones por las que los padres nos llaman con mayor frecuencia. Si la suya no aparece aquí, llámenos. Su situación aún puede caer dentro de nuestra práctica.
@@ -102,14 +102,7 @@ export default function HomePageEs() {
       {/* About Nicole block */}
       <section className="bg-[color:var(--surface-raised)] border-y border-[color:var(--border-subtle)] py-16 md:py-section-desktop">
         <div className="container-x grid gap-10 md:gap-16 md:grid-cols-[minmax(0,1fr)_1.4fr] items-center">
-          {/* TODO: Replace with Nicole's professional headshot when client provides it. */}
-          <div
-            className="portrait-placeholder w-full max-w-sm mx-auto md:mx-0"
-            aria-label="Retrato de Nicole Hodge Amey, marcador de posición pendiente de fotografía final"
-            style={{ fontSize: "clamp(5rem, 14vw, 9rem)" }}
-          >
-            N
-          </div>
+          <AttorneyProfileCard locale="es" className="w-full max-w-sm mx-auto md:mx-0" />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
               Sobre Nicole
@@ -118,11 +111,10 @@ export default function HomePageEs() {
               className="font-serif text-[color:var(--brand-primary)] mb-5"
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", lineHeight: 1.2, fontWeight: 700 }}
             >
-              Una abogada de derechos civiles enfocada en una sola cosa.
+              Una abogada de California enfocada en la educación especial.
             </h2>
-            {/* TODO: client to provide final bio */}
             <p className="text-lg text-[color:var(--text-primary)] leading-relaxed max-w-prose">
-              Nicole Hodge Amey ha ejercido la abogacía en derechos civiles de educación especial en California desde diciembre de 2001, el año en que fue admitida al Colegio Estatal de Abogados. A lo largo de los años ha representado a cientos de familias en desacuerdos sobre el IEP, procedimientos de proceso de impugnación, asuntos disciplinarios y casos de discriminación por discapacidad. Las consultas y la representación completa están disponibles en inglés y en español, de modo que las familias del Área de la Bahía y del Valle Central puedan trabajar con ella en el idioma que hablan en casa.
+              Nicole Hodge Amey ejerce la abogacía en California desde diciembre de 2001. Su trabajo ayuda a familias con desacuerdos sobre el IEP, asuntos de proceso debido, disciplina escolar y derechos relacionados con discapacidades en la educación. Hay asistencia disponible en español.
             </p>
             <div className="mt-8">
               <Link href="/es/sobre-nicole" className="btn btn-primary">
@@ -133,33 +125,10 @@ export default function HomePageEs() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="py-16 md:py-section-desktop">
-        <div className="container-x">
-          <div className="max-w-3xl mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
-              De las familias que representamos
-            </p>
-            <h2
-              className="font-serif text-[color:var(--brand-primary)]"
-              style={{ fontSize: "clamp(1.75rem, 3.2vw, 2.441rem)", lineHeight: 1.2, fontWeight: 700 }}
-            >
-              Nombres reservados. Resultados documentados.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* TODO: client to provide final testimonials with signed consent forms */}
-            <TestimonialCard
-              caseType="IEP · Primaria"
-              quote="Pude hablar con Nicole en español sobre cada detalle del caso de mi hija. Por primera vez sentí que entendía completamente lo que estaba pasando con su educación."
-              attribution="Madre de estudiante, Condado de Kern"
-            />
-            <TestimonialCard
-              caseType="Proceso de impugnación"
-              quote="El distrito nos trataba como si estuviéramos exagerando. Nicole nos trató como si tuviéramos razón. La audiencia se resolvió antes del testimonio, con los servicios que habíamos pedido desde el principio."
-              attribution="Padre de estudiante, Condado de Alameda"
-            />
-          </div>
+        <div className="container-x grid gap-10 md:grid-cols-[1fr_1.6fr] md:gap-16">
+          <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-3">Privacidad primero</p><h2 className="font-serif text-[color:var(--brand-primary)]" style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)", lineHeight: 1.2, fontWeight: 700 }}>La historia de su familia no es publicidad.</h2></div>
+          <div className="space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)] max-w-prose"><p>Este sitio explica los asuntos educativos que maneja el bufete y facilita el contacto. No publica historias de clientes como contenido de mercadeo.</p><Link href="/es/privacidad" className="btn btn-secondary">Lea nuestra política de privacidad</Link></div>
         </div>
       </section>
 
@@ -193,8 +162,8 @@ export default function HomePageEs() {
       <CTABanner
         eyebrow="Hablemos"
         heading="Cuéntenos la situación de su hijo."
-        body="Respondemos dentro de 24 horas hábiles. No hay costo por preguntar si somos el bufete adecuado para su caso."
-        primaryCta={{ label: "Programe una consulta", href: "/es/contacto" }}
+        body="Respondemos dentro de 24 horas hábiles. El primer paso es identificar si su asunto corresponde al bufete, a apoyo de defensa educativa o a otro recurso."
+        primaryCta={{ label: "Contacte al bufete", href: "/es/contacto" }}
         secondaryCallLabel={`Llame al ${SITE.phone}`}
       />
     </SiteFrame>

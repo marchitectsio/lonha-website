@@ -6,6 +6,7 @@ import CredibilityStrip from "@/components/CredibilityStrip";
 import PracticeCard from "@/components/PracticeCard";
 import ResourceCard from "@/components/ResourceCard";
 import CTABanner from "@/components/CTABanner";
+import AttorneyProfileCard from "@/components/AttorneyProfileCard";
 import { PRACTICE_AREAS, FEATURED_GUIDES, COVERAGE_AREAS, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -120,7 +121,8 @@ export default function HomePage() {
               Amey Educational Advocates focuses on advocacy, training, and consulting. If advocacy is the better fit, we can point you toward AEA so your family starts in the right place.
             </p>
             <div className="pt-2">
-              <Link href="/contact" className="btn btn-primary">Ask where your situation fits</Link>
+              <a href="https://ameyed.com/" className="btn btn-secondary" target="_blank" rel="noreferrer">Visit Amey Educational Advocates</a>
+              <Link href="/contact" className="btn btn-primary ml-0 sm:ml-3 mt-3 sm:mt-0">Ask where your situation fits</Link>
             </div>
           </div>
         </div>
@@ -128,13 +130,7 @@ export default function HomePage() {
 
       <section className="bg-[color:var(--surface)] py-16 md:py-section-desktop">
         <div className="container-x grid gap-10 md:gap-16 md:grid-cols-[minmax(0,1fr)_1.4fr] items-center">
-          <div
-            className="portrait-placeholder w-full max-w-sm mx-auto md:mx-0"
-            aria-label="Portrait of Nicole Hodge Amey, placeholder pending final photography"
-            style={{ fontSize: "clamp(5rem, 14vw, 9rem)" }}
-          >
-            N
-          </div>
+          <AttorneyProfileCard locale="en" className="w-full max-w-sm mx-auto md:mx-0" />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
               About Nicole
@@ -146,7 +142,7 @@ export default function HomePage() {
               A California attorney focused on special education.
             </h2>
             <p className="text-lg text-[color:var(--text-primary)] leading-relaxed max-w-prose">
-              Nicole Hodge Amey has practiced special-education law in California since December 2001, the year she was admitted to the State Bar. Her work centers on helping families address IEP disputes, due-process matters, school discipline concerns, and education-related disability-rights issues. Consultations and full case representation are available in English and Spanish.
+              Nicole Hodge Amey has practiced law in California since December 2001. Her work centers on helping families address IEP disputes, due-process matters, school discipline concerns, and education-related disability-rights issues. Spanish-language assistance is available.
             </p>
             <div className="mt-8">
               <Link href="/about" className="btn btn-primary">
@@ -229,7 +225,7 @@ export default function HomePage() {
                 key={g.slug}
                 title={g.title}
                 summary={g.summary}
-                href={`/know-your-rights#${g.slug}`}
+                href="/know-your-rights"
                 type={g.type}
                 language={g.language}
               />

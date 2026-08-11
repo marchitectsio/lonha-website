@@ -18,22 +18,25 @@ const LINKS = {
       { href: "/about", label: "About Nicole" },
       { href: "/how-we-help", label: "How we help" },
       { href: "/know-your-rights", label: "Know your rights" },
-      { href: "/testimonials", label: "Testimonials" },
+      { href: "/privacy", label: "Privacy" },
       { href: "/contact", label: "Contact" },
     ],
     credentials: [
       { href: "/accessibility", label: "Accessibility statement" },
-      { href: "/contact", label: "Privacy & disclaimers" },
+      { href: "/privacy", label: "Privacy & disclaimers" },
     ],
   },
   es: {
     explore: [
       { href: "/es/sobre-nicole", label: "Sobre Nicole" },
       { href: "/es/como-ayudamos", label: "Cómo ayudamos" },
+      { href: "/es/recursos", label: "Recursos" },
+      { href: "/es/privacidad", label: "Privacidad" },
       { href: "/es/contacto", label: "Contacto" },
     ],
     credentials: [
       { href: "/accessibility", label: "Declaración de accesibilidad" },
+      { href: "/es/privacidad", label: "Privacidad y avisos" },
     ],
   },
 };
@@ -49,8 +52,8 @@ export default function Footer({ locale }: Props) {
 
   const builtTo =
     locale === "es"
-      ? "Construido conforme a WCAG 2.1 AA."
-      : "Built to WCAG 2.1 AA standards.";
+      ? "Diseñado teniendo en cuenta WCAG 2.1 AA."
+      : "Designed with WCAG 2.1 AA in mind.";
 
   return (
     <footer className="bg-[color:var(--surface-inverse)] text-[color:var(--text-on-inverse)] mt-24">
@@ -122,17 +125,6 @@ export default function Footer({ locale }: Props) {
                 <br />
                 {locale === "es" ? "Admitida en " : "Admitted "}
                 {SITE.bar.admittedFull}
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-[color:var(--text-on-inverse)]/60">
-                {locale === "es" ? "Membresía" : "Membership"}
-              </dt>
-              <dd>
-                {locale === "es" ? "Miembro de COPAA " : "Member, COPAA "}
-                <span className="text-[color:var(--text-on-inverse)]/70">
-                  (Council of Parent Attorneys and Advocates)
-                </span>
               </dd>
             </div>
             <ul className="pt-2 space-y-2">

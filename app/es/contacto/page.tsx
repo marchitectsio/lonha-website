@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const FAQ_ES = [
   {
     q: "¿Cuánto cuesta una consulta inicial?",
-    a: "Discutimos las tarifas durante la primera conversación. La consulta inicial es una oportunidad para que ambos determinemos si somos el bufete adecuado. Bajo IDEA, los padres que prevalecen en un procedimiento de proceso de impugnación pueden recuperar honorarios de abogado del distrito escolar. Esta es una disposición real de la ley federal, no una promesa de marketing.",
+    a: "Las tarifas y el alcance del trabajo propuesto se explican antes de que comience la representación. Contactar al bufete no garantiza que el asunto será aceptado.",
   },
   {
     q: "¿Toman casos fuera del Área de la Bahía?",
@@ -22,7 +22,7 @@ const FAQ_ES = [
   },
   {
     q: "¿Habla español?",
-    a: "Sí. Nicole Hodge Amey es completamente bilingüe en inglés y español. Las consultas, la asistencia a reuniones del IEP y la representación completa del caso están todas disponibles en español.",
+    a: "Hay asistencia disponible en español. Indique su idioma preferido cuando se comunique con el bufete.",
   },
   {
     q: "¿Cómo me preparo para nuestra primera llamada?",
@@ -57,7 +57,7 @@ export default function ContactPageEs() {
             <ContactForm locale="es" />
           </div>
 
-          <aside aria-labelledby="contact-info" className="space-y-8">
+          <aside id="contact-direct" aria-labelledby="contact-info" className="space-y-8">
             <div>
               <h2 id="contact-info" className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-4">
                 Contacto directo
