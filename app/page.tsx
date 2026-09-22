@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteFrame from "@/components/SiteFrame";
 import Hero from "@/components/Hero";
@@ -31,6 +32,21 @@ export default function HomePage() {
         primaryCta={{ label: "Contact the firm", href: "/contact" }}
         secondaryCta={{ label: `Call ${SITE.phone}`, href: `tel:${SITE.phoneRaw}` }}
       />
+
+      {/* Original site header banner: EQUAL JUSTICE carved in stone */}
+      <section aria-label="Equal justice" className="bg-[color:var(--surface)] pb-10 md:pb-14">
+        <div className="container-x">
+          <figure className="mx-auto max-w-[603px]">
+            <Image
+              src="/images/equal-justice-header.jpg"
+              alt="EQUAL JUSTICE carved in stone above courthouse columns"
+              width={603}
+              height={249}
+              className="h-auto w-full rounded-xl shadow-sm"
+            />
+          </figure>
+        </div>
+      </section>
 
       <CredibilityStrip
         items={[
