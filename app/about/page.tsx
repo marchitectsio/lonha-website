@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteFrame from "@/components/SiteFrame";
 import CTABanner from "@/components/CTABanner";
@@ -89,6 +90,39 @@ export default function AboutPage() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn btn-cta">Contact the firm</Link>
               <Link href="/how-we-help" className="btn btn-secondary">See legal services</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[color:var(--surface-raised)] border-y border-[color:var(--border-subtle)] py-12 md:py-20">
+        <div className="container-x">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-6">
+            Meet Team LONHA
+          </p>
+          <div className="grid gap-8 md:grid-cols-[300px_1fr] md:gap-12 items-start">
+            <Image
+              src="/images/ty-amey.jpg"
+              alt="Portrait of Ty Amey"
+              width={359}
+              height={322}
+              className="w-full max-w-[300px] rounded-xl shadow-sm"
+            />
+            <div>
+              <h2
+                className="font-serif font-bold text-[color:var(--brand-primary)]"
+                style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)", lineHeight: 1.2 }}
+              >
+                Ty Amey, Director of Legal Operations
+              </h2>
+              <div className="mt-5 space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)] max-w-prose">
+                <p>
+                  Ty Amey brings more than a decade of leadership experience to the firm, beginning with his time at the United States Military Academy at West Point. Born and raised in Lynwood, California, Ty graduated with a B.S. in Engineering Management with a minor in Civil Engineering and received a presidential commission as an officer in the United States Army.
+                </p>
+                <p>
+                  When injury cut his military career short, Ty brought his leadership experience to the private sector, serving in staffing roles with PepsiCo and Nestlé, where he successfully led manufacturing and route-sales teams in productivity, sales, development, and safety. Ty is a proud member of Phi Beta Sigma Fraternity Inc., coaches football in his spare time, and enjoys reading, strategy games, and outdoor activities.
+                </p>
+              </div>
             </div>
           </div>
         </div>
