@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteFrame from "@/components/SiteFrame";
 import Hero from "@/components/Hero";
@@ -49,6 +50,21 @@ export default function HomePageEs() {
         primaryCta={{ label: "Contacte al bufete", href: "/es/contacto" }}
         secondaryCta={{ label: "Conozca sus derechos", href: "/es/recursos" }}
       />
+
+      {/* Encabezado del sitio original: EQUAL JUSTICE tallado en piedra */}
+      <section aria-label="Igualdad ante la justicia" className="bg-[color:var(--surface)] pb-10 md:pb-14">
+        <div className="container-x">
+          <figure className="mx-auto max-w-[603px]">
+            <Image
+              src="/images/equal-justice-header.jpg"
+              alt="EQUAL JUSTICE tallado en piedra sobre las columnas de un palacio de justicia"
+              width={603}
+              height={249}
+              className="h-auto w-full rounded-xl shadow-sm"
+            />
+          </figure>
+        </div>
+      </section>
 
       <CredibilityStrip
         items={[
