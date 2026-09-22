@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteFrame from "@/components/SiteFrame";
 import CTABanner from "@/components/CTABanner";
@@ -89,6 +90,39 @@ export default function AboutPageEs() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link href="/es/contacto" className="btn btn-cta">Programe una consulta</Link>
               <Link href="/es/como-ayudamos" className="btn btn-secondary">Áreas de práctica</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[color:var(--surface-raised)] border-y border-[color:var(--border-subtle)] py-12 md:py-20">
+        <div className="container-x">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-secondary)] mb-6">
+            Conozca al equipo de LONHA
+          </p>
+          <div className="grid gap-8 md:grid-cols-[300px_1fr] md:gap-12 items-start">
+            <Image
+              src="/images/ty-amey.jpg"
+              alt="Retrato de Ty Amey"
+              width={359}
+              height={322}
+              className="w-full max-w-[300px] rounded-xl shadow-sm"
+            />
+            <div>
+              <h2
+                className="font-serif font-bold text-[color:var(--brand-primary)]"
+                style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)", lineHeight: 1.2 }}
+              >
+                Ty Amey, Director de Operaciones Legales
+              </h2>
+              <div className="mt-5 space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)] max-w-prose">
+                <p>
+                  Ty Amey aporta más de una década de experiencia en liderazgo al bufete, comenzando con su paso por la Academia Militar de los Estados Unidos en West Point. Nacido y criado en Lynwood, California, Ty se graduó con una licenciatura en Ingeniería de Gestión con especialización secundaria en Ingeniería Civil y recibió una comisión presidencial como oficial del Ejército de los Estados Unidos.
+                </p>
+                <p>
+                  Cuando una lesión interrumpió su carrera militar, Ty llevó su experiencia de liderazgo al sector privado, desempeñándose en roles de personal con PepsiCo y Nestlé, donde dirigió con éxito equipos de manufactura y ventas en productividad, ventas, desarrollo y seguridad. Ty es un orgulloso miembro de la fraternidad Phi Beta Sigma Inc., entrena fútbol americano en su tiempo libre y disfruta de la lectura, los juegos de estrategia y las actividades al aire libre.
+                </p>
+              </div>
             </div>
           </div>
         </div>
