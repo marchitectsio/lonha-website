@@ -5,7 +5,7 @@ export const SITE = {
   abbrev: "LONHA",
   phone: "(510) 479-0003",
   phoneRaw: "+15104790003",
-  email: "hodgelaw@gmail.com",
+  email: "Contact@lonhaca.com",
   address: {
     line1: "P.O. Box 5100",
     cityStateZip: "Oakland, CA 94605",

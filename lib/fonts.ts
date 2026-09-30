@@ -5,14 +5,14 @@ import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 export const serif = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-serif",
+  variable: "--font-heading",
   display: "swap",
 });
 
 export const sans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  variable: "--font-sans",
+  variable: "--font-body",
   display: "swap",
 });
 
