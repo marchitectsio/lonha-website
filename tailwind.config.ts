@@ -42,8 +42,10 @@ const config: Config = {
         focus: "#B05E3A",
       },
       fontFamily: {
-        serif: ['"Libre Baskerville"', "Georgia", '"Times New Roman"', "serif"],
-        sans: ['"Source Sans 3"', "system-ui", "-apple-system", '"Segoe UI"', "sans-serif"],
+        // Wired to next/font CSS variables (see lib/fonts.ts). The variable
+        // resolves to the self-hosted font; fallbacks stay as before.
+        serif: ["var(--font-serif)", "Georgia", '"Times New Roman"', "serif"],
+        sans: ["var(--font-sans)", "system-ui", "-apple-system", '"Segoe UI"', "sans-serif"],
       },
       fontSize: {
         // Modular 1.250 scale, 16px base. [size, lineHeight]

@@ -109,3 +109,32 @@ export const COVERAGE_AREAS = [
   "Bakersfield",
   "Los Angeles County",
 ];
+
+// Structured data for search engines (JSON-LD, schema.org Attorney).
+// Rendered by both locale layouts so every page carries it.
+export const ATTORNEY_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Attorney",
+  "@id": "https://www.lonhaca.com/#attorney",
+  name: SITE.name,
+  alternateName: SITE.abbrev,
+  url: "https://www.lonhaca.com",
+  telephone: SITE.phoneRaw,
+  email: SITE.email,
+  address: {
+    "@type": "PostalAddress",
+    postOfficeBoxNumber: "5100",
+    addressLocality: "Oakland",
+    addressRegion: "CA",
+    postalCode: "94605",
+    addressCountry: "US",
+  },
+  areaServed: COVERAGE_AREAS,
+  knowsAbout: PRACTICE_AREAS.map((a) => a.title),
+  founder: {
+    "@type": "Person",
+    name: "Nicole Hodge Amey",
+    jobTitle: "Attorney",
+  },
+  priceRange: "$$",
+} as const;

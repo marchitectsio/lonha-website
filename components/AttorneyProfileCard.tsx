@@ -14,8 +14,8 @@ export default function AttorneyProfileCard({ locale, className = "" }: Props) {
         <Image
           src="/images/nicole-hodge-amey.jpg"
           alt={spanish ? "Retrato de Nicole Hodge Amey" : "Portrait of Nicole Hodge Amey"}
-          width={369}
-          height={295}
+          width={1696}
+          height={1328}
           className="mb-6 w-full max-w-[300px] rounded-xl object-cover"
         />
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">

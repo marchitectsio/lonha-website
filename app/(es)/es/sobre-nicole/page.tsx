@@ -104,8 +104,8 @@ export default function AboutPageEs() {
             <Image
               src="/images/ty-amey.jpg"
               alt="Retrato de Ty Amey"
-              width={359}
-              height={322}
+              width={1584}
+              height={1440}
               className="w-full max-w-[300px] rounded-xl shadow-sm"
             />
             <div>
