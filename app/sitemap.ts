@@ -24,8 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/es/privacidad",
     "/es/contacto",
   ];
+  // No lastModified: stamping every URL with the build date on each deploy
+  // dilutes crawl-priority signals. Add real per-page dates if they become
+  // available; until then, omit the field entirely.
   return pages.map((p) => ({
     url: `${BASE}${p}`,
-    lastModified: new Date(),
   }));
 }

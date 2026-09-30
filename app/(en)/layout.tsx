@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
+import { fontVariables } from "@/lib/fonts";
+import { ATTORNEY_JSON_LD } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lonhaca.com"),
@@ -22,22 +24,16 @@ export const metadata: Metadata = {
   },
 };
 
-// Root layout renders <html lang="en"> by default. For Spanish routes
-// (/es/**), a post-build step rewrites the lang attribute to "es" in
-// the generated HTML files so screen readers get the right pronunciation
-// on initial render.
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function EnglishLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
-          rel="stylesheet"
+    <html lang="en" className={fontVariables}>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ATTORNEY_JSON_LD) }}
         />
-      </head>
-      <body>{children}</body>
+        {children}
+      </body>
     </html>
   );
 }

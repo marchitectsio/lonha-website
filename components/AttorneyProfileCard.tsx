@@ -14,8 +14,8 @@ export default function AttorneyProfileCard({ locale, className = "" }: Props) {
         <Image
           src="/images/nicole-hodge-amey.jpg"
           alt={spanish ? "Retrato de Nicole Hodge Amey" : "Portrait of Nicole Hodge Amey"}
-          width={369}
-          height={295}
+          width={1696}
+          height={1328}
           className="mb-6 w-full max-w-[300px] rounded-xl object-cover"
         />
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
@@ -25,7 +25,7 @@ export default function AttorneyProfileCard({ locale, className = "" }: Props) {
         <div className="mt-6 grid gap-3 text-sm text-white/90">
           <span className="inline-flex items-center gap-2"><BadgeCheck aria-hidden="true" className="h-4 w-4 text-[color:var(--brand-accent)]" />{spanish ? "Licencia activa" : "Active license"}</span>
           <span className="inline-flex items-center gap-2"><Scale aria-hidden="true" className="h-4 w-4 text-[color:var(--brand-accent)]" />{spanish ? `Colegio de Abogados #${SITE.bar.number}` : `State Bar #${SITE.bar.number}`}</span>
-          <span>{spanish ? `Admitida en ${SITE.bar.admittedFull}` : `Admitted ${SITE.bar.admittedFull}`}</span>
+          <span>{spanish ? `Admitida en ${SITE.bar.admittedFullEs}` : `Admitted ${SITE.bar.admittedFull}`}</span>
         </div>
       </div>
     </div>

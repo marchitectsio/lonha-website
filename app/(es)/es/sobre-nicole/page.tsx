@@ -51,7 +51,7 @@ export default function AboutPageEs() {
                 <Scale aria-hidden="true" className="h-5 w-5 mt-1 text-[color:var(--brand-secondary)]" strokeWidth={1.5} />
                 <div>
                   <dt className="font-semibold">Admisión al Colegio de Abogados</dt>
-                  <dd><a href="https://apps.calbar.ca.gov/attorney/Licensee/Detail/215157" target="_blank" rel="noreferrer">Colegio Estatal de Abogados de California #{SITE.bar.number}<span className="sr-only"> (se abre en una nueva pestaña)</span></a><br />Admitida en {SITE.bar.admittedFull}</dd>
+                  <dd><a href="https://apps.calbar.ca.gov/attorney/Licensee/Detail/215157" target="_blank" rel="noreferrer">Colegio Estatal de Abogados de California #{SITE.bar.number}<span className="sr-only"> (se abre en una nueva pestaña)</span></a><br />Admitida en {SITE.bar.admittedFullEs}</dd>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -104,8 +104,8 @@ export default function AboutPageEs() {
             <Image
               src="/images/ty-amey.jpg"
               alt="Retrato de Ty Amey"
-              width={359}
-              height={322}
+              width={1584}
+              height={1440}
               className="w-full max-w-[300px] rounded-xl shadow-sm"
             />
             <div>
