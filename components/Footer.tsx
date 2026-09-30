@@ -124,7 +124,7 @@ export default function Footer({ locale }: Props) {
                 California State Bar #{SITE.bar.number}
                 <br />
                 {locale === "es" ? "Admitida en " : "Admitted "}
-                {SITE.bar.admittedFull}
+                {locale === "es" ? SITE.bar.admittedFullEs : SITE.bar.admittedFull}
               </dd>
             </div>
             <ul className="pt-2 space-y-2">
@@ -145,7 +145,7 @@ export default function Footer({ locale }: Props) {
 
       <div className="border-t border-white/10">
         <div className="container-x py-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between text-sm text-[color:var(--text-on-inverse)]/70">
-          <p>{SITE.copyright}</p>
+          <p>{locale === "es" ? SITE.copyrightEs : SITE.copyright}</p>
           <p>{builtTo}</p>
         </div>
         <div className="container-x pb-8 text-xs text-[color:var(--text-on-inverse)]/60 max-w-prose">

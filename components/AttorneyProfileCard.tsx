@@ -25,7 +25,7 @@ export default function AttorneyProfileCard({ locale, className = "" }: Props) {
         <div className="mt-6 grid gap-3 text-sm text-white/90">
           <span className="inline-flex items-center gap-2"><BadgeCheck aria-hidden="true" className="h-4 w-4 text-[color:var(--brand-accent)]" />{spanish ? "Licencia activa" : "Active license"}</span>
           <span className="inline-flex items-center gap-2"><Scale aria-hidden="true" className="h-4 w-4 text-[color:var(--brand-accent)]" />{spanish ? `Colegio de Abogados #${SITE.bar.number}` : `State Bar #${SITE.bar.number}`}</span>
-          <span>{spanish ? `Admitida en ${SITE.bar.admittedFull}` : `Admitted ${SITE.bar.admittedFull}`}</span>
+          <span>{spanish ? `Admitida en ${SITE.bar.admittedFullEs}` : `Admitted ${SITE.bar.admittedFull}`}</span>
         </div>
       </div>
     </div>

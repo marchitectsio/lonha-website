@@ -15,8 +15,10 @@ export const SITE = {
     number: "215157",
     admittedYear: 2001,
     admittedFull: "December 2001",
+    admittedFullEs: "diciembre de 2001",
   },
   copyright: `© ${new Date().getFullYear()} Law Offices of Nicole Hodge Amey. All rights reserved.`,
+  copyrightEs: `© ${new Date().getFullYear()} Law Offices of Nicole Hodge Amey. Todos los derechos reservados.`,
 };
 
 export type Locale = "en" | "es";
