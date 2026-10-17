@@ -58,7 +58,7 @@ export default function ContactPage() {
         <div className="container-x grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           <div>
             <h2 className="sr-only">Contact form</h2>
-            <ContactForm locale="en" />
+            <ContactForm locale="en" acceptingMessages={Boolean(process.env.CONTACT_WEBHOOK_URL)} />
           </div>
 
           <aside id="contact-direct" aria-labelledby="contact-info" className="space-y-8">

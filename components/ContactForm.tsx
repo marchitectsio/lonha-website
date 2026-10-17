@@ -73,9 +73,9 @@ const COPY = {
   },
 } as const;
 
-type Props = { locale: Locale };
+type Props = { locale: Locale; acceptingMessages?: boolean };
 
-export default function ContactForm({ locale }: Props) {
+export default function ContactForm({ locale, acceptingMessages = true }: Props) {
   const copy = COPY[locale];
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
@@ -135,6 +135,26 @@ export default function ContactForm({ locale }: Props) {
     } finally {
       setSubmitting(false);
     }
+  }
+
+  if (!acceptingMessages) {
+    return (
+      <div className="card bg-[color:var(--surface-raised)]" role="status">
+        <h2 className="font-serif text-[color:var(--brand-primary)] text-2xl font-semibold mb-3">
+          {locale === "es" ? "Contáctenos por teléfono" : "Please call the firm"}
+        </h2>
+        <p className="leading-relaxed text-[color:var(--text-primary)]">
+          {locale === "es"
+            ? "El formulario de mensajes no está disponible temporalmente. Llame para comunicarse con el bufete."
+            : "The online message form is temporarily unavailable. Please contact the firm by phone."}
+        </p>
+        <p className="mt-4">
+          <a className="text-[color:var(--link)] font-semibold underline" href="tel:+15104790003">
+            (510) 479-0003
+          </a>
+        </p>
+      </div>
+    );
   }
 
   if (submitted) {
