@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteFrame from "@/components/SiteFrame";
 import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -74,13 +74,7 @@ export default function ContactPage() {
                     <a href={`tel:${SITE.phoneRaw}`} className="text-[color:var(--link)]">{SITE.phone}</a>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <Mail aria-hidden="true" className="h-5 w-5 mt-0.5 flex-shrink-0 text-[color:var(--brand-accent)]" strokeWidth={1.5} />
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <a href={`mailto:${SITE.email}`} className="text-[color:var(--link)] break-all">{SITE.email}</a>
-                  </div>
-                </li>
+                
                 <li className="flex items-start gap-3">
                   <MapPin aria-hidden="true" className="h-5 w-5 mt-0.5 flex-shrink-0 text-[color:var(--brand-accent)]" strokeWidth={1.5} />
                   <div>

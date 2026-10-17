@@ -8,7 +8,7 @@ import { PRACTICE_AREAS, SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "How we help",
   description:
-    "LONHA helps California families with IEP disputes, due process, school discipline matters, and education-related disability-rights concerns.",
+    "LONHA helps California families with IEP disputes, due process, school discipline matters, education-related disability-rights concerns, and special needs trust planning inquiries.",
   alternates: { canonical: "/how-we-help", languages: { en: "/how-we-help", es: "/es/como-ayudamos" } },
 };
 
@@ -28,10 +28,10 @@ export default function HowWeHelpPage() {
           </h1>
           <div className="mt-6 max-w-prose space-y-5 text-lg text-[color:var(--text-primary)] leading-relaxed">
             <p>
-              The Law Offices of Nicole Hodge Amey helps families when a school issue needs legal attention: an IEP dispute, due-process matter, discipline concern, Section 504 issue, or another education-related disability-rights question.
+              The Law Offices of Nicole Hodge Amey helps families when a school issue needs legal attention: an IEP dispute, due-process matter, discipline concern, Section 504 issue, another education-related disability-rights question, or a special needs trust planning need.
             </p>
             <p>
-              The goal is to understand what is happening at school, identify the right lane, and help move the student toward the education and support they need.
+              For education matters, we focus on the support the student needs at school. Special needs trusts involve separate long-term planning questions, including the possible impact on needs-based benefits.
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function HowWeHelpPage() {
       <CTABanner
         eyebrow="We can help"
         heading="Not sure which path applies?"
-        body="Tell us what is happening at school, and we will help identify whether the matter belongs with the law firm, advocacy support, or another resource."
+        body="Briefly describe your education or planning question, and we can discuss whether the firm is an appropriate place to start."
         primaryCta={{ label: "Contact the firm", href: "/contact" }}
         secondaryCallLabel={`Call ${SITE.phone}`}
       />
