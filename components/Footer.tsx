@@ -79,15 +79,6 @@ export default function Footer({ locale }: Props) {
                 {SITE.phone}
               </a>
             </div>
-            <div className="flex items-start gap-3">
-              <Mail aria-hidden="true" className="h-4 w-4 mt-1 flex-shrink-0 text-[color:var(--brand-accent)]" />
-              <a
-                href={`mailto:${SITE.email}`}
-                className="text-[color:var(--text-on-inverse)] underline decoration-1 underline-offset-2 hover:decoration-2 break-all"
-              >
-                {SITE.email}
-              </a>
-            </div>
           </address>
         </div>
 

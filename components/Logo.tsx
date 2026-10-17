@@ -8,10 +8,7 @@ type Props = {
   ariaLabel?: string;
 };
 
-/**
- * LONHA wordmark. Per Phase 2 §2.1: "Law Offices of Nicole Hodge Amey" in Libre
- * Baskerville Bold, with "LONHA" in Source Sans 3 SemiBold small-caps below.
- */
+/** Firm wordmark. Playfair Display for the attorney name and Source Sans 3 for the descriptor. */
 export default function Logo({
   variant = "full",
   href = "/",
@@ -30,12 +27,13 @@ export default function Logo({
           LONHA
         </span>
       ) : (
-        <span
-          aria-hidden="true"
-          className={`font-serif font-bold leading-tight ${fullColor}`}
-          style={{ fontSize: "1.125rem", letterSpacing: "0.01em" }}
-        >
-          Law Offices of Nicole Hodge Amey
+        <span aria-hidden="true" className={`inline-flex flex-col items-start leading-none ${fullColor}`}>
+          <span className="font-sans font-semibold uppercase tracking-[0.22em] text-[0.625rem] mb-1">
+            Law Offices of
+          </span>
+          <span className="font-serif font-semibold tracking-[-0.015em] text-[1.375rem] leading-tight">
+            Nicole Hodge Amey
+          </span>
         </span>
       )}
     </Link>

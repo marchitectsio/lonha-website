@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const featuredPractice = PRACTICE_AREAS.slice(0, 3);
+  const featuredPractice = PRACTICE_AREAS;
 
   return (
     <SiteFrame locale="en" otherLocaleHref="/es">
@@ -94,7 +94,7 @@ export default function HomePage() {
               Legal support for special-education problems.
             </h2>
             <p className="mt-5 text-lg text-[color:var(--text-primary)] max-w-prose">
-              LONHA handles the legal side of special education: IEP disputes, due process, discipline matters, and disability-rights concerns connected to school. If your situation does not fit neatly into one category, contact us and we will help identify the right next step.
+              LONHA represents families in special education matters, including IEP disputes, due process, discipline, and disability rights. We also welcome inquiries about special needs trust planning. If you are unsure where to begin, contact the firm to discuss your situation.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">

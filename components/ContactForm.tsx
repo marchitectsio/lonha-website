@@ -2,7 +2,6 @@
 
 import { FormEvent, useRef, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
-import { SITE } from "@/lib/site";
 
 type Locale = "en" | "es";
 type Errors = Partial<Record<"name" | "phone" | "email" | "message" | "consent" | "form", string>>;
@@ -37,8 +36,6 @@ const COPY = {
     summaryHeading: "Please correct the following:",
     successHeading: "Thank you. We'll be in touch.",
     successBody: "We respond within 24 business hours. If your situation is urgent, please call us at (510) 479-0003.",
-    emailHeading: "Your email draft is ready.",
-    emailBody: "Review the message in your email app and press send. If it did not open, email Contact@lonhaca.com or call (510) 479-0003.",
     counter: (n: number) => `${n} / 500 characters`,
     required: "required",
   },
@@ -71,21 +68,18 @@ const COPY = {
     summaryHeading: "Por favor corrija lo siguiente:",
     successHeading: "Gracias. Nos comunicaremos con usted.",
     successBody: "Respondemos dentro de 24 horas hábiles. Si su situación es urgente, llame al (510) 479-0003.",
-    emailHeading: "Su borrador de correo está listo.",
-    emailBody: "Revise el mensaje en su aplicación de correo y presione enviar. Si no se abrió, escriba a Contact@lonhaca.com o llame al (510) 479-0003.",
     counter: (n: number) => `${n} / 500 caracteres`,
     required: "obligatorio",
   },
 } as const;
 
-type Props = { locale: Locale };
+type Props = { locale: Locale; acceptingMessages?: boolean };
 
-export default function ContactForm({ locale }: Props) {
+export default function ContactForm({ locale, acceptingMessages = true }: Props) {
   const copy = COPY[locale];
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [usedEmailFallback, setUsedEmailFallback] = useState(false);
   const [messageLength, setMessageLength] = useState(0);
   const successHeadingRef = useRef<HTMLHeadingElement | null>(null);
   const errorSummaryRef = useRef<HTMLDivElement | null>(null);
@@ -127,23 +121,6 @@ export default function ContactForm({ locale }: Props) {
         body: new FormData(form),
       });
 
-      if (response.status === 503) {
-        const data = new FormData(form);
-        const subject = locale === "es" ? "Consulta desde lonhaca.com" : "Website inquiry from lonhaca.com";
-        const body = [
-          `${copy.labels.name}: ${String(data.get("name") ?? "")}`,
-          `${copy.labels.phone}: ${String(data.get("phone") ?? "")}`,
-          `${copy.labels.email}: ${String(data.get("email") ?? "")}`,
-          `${copy.labels.language}: ${String(data.get("language") ?? "")}`,
-          "",
-          String(data.get("message") ?? ""),
-        ].join("\n");
-        setUsedEmailFallback(true);
-        setSubmitted(true);
-        window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        return;
-      }
-
       if (!response.ok) {
         throw new Error("Contact submission failed");
       }
@@ -153,11 +130,31 @@ export default function ContactForm({ locale }: Props) {
       setMessageLength(0);
       setTimeout(() => successHeadingRef.current?.focus(), 0);
     } catch {
-      setErrors({ form: locale === "es" ? "No se pudo enviar el mensaje. Llame o envíe un correo directamente." : "The message could not be sent. Please call or email the firm directly." });
+      setErrors({ form: locale === "es" ? "No se pudo enviar el mensaje. Llame directamente al bufete." : "The message could not be sent. Please call the firm directly." });
       setTimeout(() => errorSummaryRef.current?.focus(), 0);
     } finally {
       setSubmitting(false);
     }
+  }
+
+  if (!acceptingMessages) {
+    return (
+      <div className="card bg-[color:var(--surface-raised)]" role="status">
+        <h2 className="font-serif text-[color:var(--brand-primary)] text-2xl font-semibold mb-3">
+          {locale === "es" ? "Contáctenos por teléfono" : "Please call the firm"}
+        </h2>
+        <p className="leading-relaxed text-[color:var(--text-primary)]">
+          {locale === "es"
+            ? "El formulario de mensajes no está disponible temporalmente. Llame para comunicarse con el bufete."
+            : "The online message form is temporarily unavailable. Please contact the firm by phone."}
+        </p>
+        <p className="mt-4">
+          <a className="text-[color:var(--link)] font-semibold underline" href="tel:+15104790003">
+            (510) 479-0003
+          </a>
+        </p>
+      </div>
+    );
   }
 
   if (submitted) {
@@ -178,9 +175,9 @@ export default function ContactForm({ locale }: Props) {
           className="font-serif text-[color:var(--brand-primary)] mb-3"
           style={{ fontSize: "1.625rem", lineHeight: 1.2, fontWeight: 700 }}
         >
-          {usedEmailFallback ? copy.emailHeading : copy.successHeading}
+          {copy.successHeading}
         </h2>
-        <p className="text-[color:var(--text-primary)]">{usedEmailFallback ? copy.emailBody : copy.successBody}</p>
+        <p className="text-[color:var(--text-primary)]">{copy.successBody}</p>
       </div>
     );
   }

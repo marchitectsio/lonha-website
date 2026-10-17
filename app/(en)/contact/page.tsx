@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteFrame from "@/components/SiteFrame";
 import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -58,7 +58,7 @@ export default function ContactPage() {
         <div className="container-x grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           <div>
             <h2 className="sr-only">Contact form</h2>
-            <ContactForm locale="en" />
+            <ContactForm locale="en" acceptingMessages={Boolean(process.env.CONTACT_WEBHOOK_URL)} />
           </div>
 
           <aside id="contact-direct" aria-labelledby="contact-info" className="space-y-8">
@@ -74,13 +74,7 @@ export default function ContactPage() {
                     <a href={`tel:${SITE.phoneRaw}`} className="text-[color:var(--link)]">{SITE.phone}</a>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <Mail aria-hidden="true" className="h-5 w-5 mt-0.5 flex-shrink-0 text-[color:var(--brand-accent)]" strokeWidth={1.5} />
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <a href={`mailto:${SITE.email}`} className="text-[color:var(--link)] break-all">{SITE.email}</a>
-                  </div>
-                </li>
+                
                 <li className="flex items-start gap-3">
                   <MapPin aria-hidden="true" className="h-5 w-5 mt-0.5 flex-shrink-0 text-[color:var(--brand-accent)]" strokeWidth={1.5} />
                   <div>

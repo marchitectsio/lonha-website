@@ -32,6 +32,7 @@ export default async function PracticeAreaPage({
   const { slug } = await params;
   const content = PRACTICE_CONTENT[slug];
   if (!content) notFound();
+  const isTrustPlanning = slug === "special-needs-trusts";
 
   return (
     <SiteFrame locale="en" otherLocaleHref="/es/como-ayudamos">
@@ -70,7 +71,7 @@ export default async function PracticeAreaPage({
               className="font-serif text-[color:var(--brand-primary)]"
               style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)", lineHeight: 1.2, fontWeight: 700 }}
             >
-              When to call us about this.
+              {isTrustPlanning ? "When to ask about trust planning." : "When to call us about this."}
             </h2>
           </div>
           <ul className="space-y-4 max-w-prose">
@@ -130,10 +131,14 @@ export default async function PracticeAreaPage({
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-[color:var(--text-primary)] max-w-prose">
             <p>
-              You do not need to know the legal language before you contact the firm. Tell us what is happening at school, and we can help identify whether the issue belongs with legal representation, advocacy support, or another resource.
+              {isTrustPlanning
+                ? "You can begin with a general question about your planning goals and the beneficiary's needs. The firm can discuss the scope of any potential assistance before you share documents."
+                : "You do not need to know the legal language before you contact the firm. Tell us what is happening at school, and we can help identify whether the issue belongs with legal representation, advocacy support, or another resource."}
             </p>
             <p>
-              Please avoid sending private student details through the form. We can ask for documents and additional information after the first contact.
+              {isTrustPlanning
+                ? "Please avoid sharing sensitive medical, financial, or beneficiary information in the website form. The firm can request relevant materials through a more appropriate process."
+                : "Please avoid sending private student details through the form. We can ask for documents and additional information after the first contact."}
             </p>
             <Link href="/contact" className="btn btn-secondary">
               Contact the firm

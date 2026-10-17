@@ -85,10 +85,6 @@ export default function AccessibilityPage() {
             </p>
             <ul className="list-disc pl-5 space-y-1 mt-3">
               <li>
-                Email:{" "}
-                <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
-              </li>
-              <li>
                 Phone: <a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a>
               </li>
               <li>

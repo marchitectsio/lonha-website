@@ -5,7 +5,7 @@ export async function POST(request: Request) {
 
   if (!webhookUrl) {
     return NextResponse.json(
-      { ok: false, error: "Contact webhook is not configured; use email fallback." },
+      { ok: false, error: "Contact form temporarily unavailable. Please call the firm directly." },
       { status: 503 },
     );
   }

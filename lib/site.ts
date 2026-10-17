@@ -5,7 +5,6 @@ export const SITE = {
   abbrev: "LONHA",
   phone: "(510) 479-0003",
   phoneRaw: "+15104790003",
-  email: "Contact@lonhaca.com",
   address: {
     line1: "P.O. Box 5100",
     cityStateZip: "Oakland, CA 94605",
@@ -68,6 +67,13 @@ export const PRACTICE_AREAS = [
       "Section 504 of the Rehabilitation Act and Title II of the ADA protect students whose disabilities affect a major life activity. These claims extend beyond IDEA and reach students not covered by an IEP.",
     icon: "Gavel",
   },
+  {
+    slug: "special-needs-trusts",
+    title: "Special Needs Trusts",
+    summary:
+      "Planning for a loved one with disabilities can involve protecting eligibility for needs-based benefits while supporting long-term needs. Learn about trust planning and discuss your family's circumstances with the firm.",
+    icon: "Landmark",
+  },
 ] as const;
 
 export type PracticeArea = (typeof PRACTICE_AREAS)[number];
@@ -122,7 +128,6 @@ export const ATTORNEY_JSON_LD = {
   alternateName: SITE.abbrev,
   url: "https://www.lonhaca.com",
   telephone: SITE.phoneRaw,
-  email: SITE.email,
   address: {
     "@type": "PostalAddress",
     postOfficeBoxNumber: "5100",
