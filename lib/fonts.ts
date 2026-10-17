@@ -1,10 +1,10 @@
-import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
+import { Playfair_Display, Source_Sans_3 } from "next/font/google";
 
 // Self-hosted via next/font: no render-blocking Google Fonts <link> tags,
 // automatic preconnect, font-display: swap, and zero layout shift.
-export const serif = Libre_Baskerville({
+export const serif = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "600", "700"],
   variable: "--font-heading",
   display: "swap",
 });

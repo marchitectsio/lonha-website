@@ -118,6 +118,38 @@ export const PRACTICE_CONTENT: Record<string, PracticeContent> = {
       { title: "How OCR complaints work", href: "/know-your-rights" },
     ],
   },
+  "special-needs-trusts": {
+    slug: "special-needs-trusts",
+    title: "Special Needs Trusts",
+    metaDescription:
+      "Special needs trust planning inquiries for California families supporting a loved one with a disability. Contact the Law Offices of Nicole Hodge Amey about your circumstances.",
+    lead:
+      "A special needs trust may help provide supplemental support for a person with a disability while protecting eligibility for certain needs-based public benefits. Different rules apply depending on whose funds are used, the beneficiary's circumstances, and the type of trust. Families can contact the firm to discuss the purpose of the trust, the questions they should consider, and possible next steps.",
+    whenToCall: [
+      "You are considering a trust to support a child or adult with a disability over the long term.",
+      "A family member may receive an inheritance, gift, or settlement, and you want to understand the implications for means-tested benefits.",
+      "You have questions about trustees, permitted distributions, or how a trust works alongside existing support.",
+      "You would like to review planning options before making financial decisions for a beneficiary.",
+    ],
+    process: [
+      {
+        heading: "1. Initial conversation",
+        body: "We begin with your family situation, the beneficiary's needs, and the goals you have for future support. Please do not send sensitive financial or medical records through the website form.",
+      },
+      {
+        heading: "2. Planning considerations",
+        body: "We discuss relevant questions, including the source of trust funds, available benefits, trustee responsibilities, and whether further legal or financial coordination may be appropriate.",
+      },
+      {
+        heading: "3. Next steps",
+        body: "The firm can explain the scope of any proposed services and whether additional specialists should be involved before decisions are made.",
+      },
+    ],
+    relatedResources: [
+      { title: "Contact the firm with a planning question", href: "/contact" },
+      { title: "Learn about the attorney", href: "/about" },
+    ],
+  },
 };
 
 export const PRACTICE_SLUGS = Object.keys(PRACTICE_CONTENT);
