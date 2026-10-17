@@ -36,10 +36,20 @@ const PRACTICE_AREAS_ES: Record<string, { title: string; summary: string }> = {
     summary:
       "La suspensión, la expulsión y la reclusión de estudiantes con discapacidades están regidas por protecciones federales específicas. Cuando una escuela disciplina a un niño por conducta relacionada con su discapacidad, la postura legal cambia de inmediato.",
   },
+  "section-504": {
+    title: "Sección 504 y discriminación",
+    summary:
+      "Ayudamos a familias con consultas sobre adaptaciones escolares, exclusiones o discriminación relacionada con una discapacidad bajo la Sección 504.",
+  },
+  "special-needs-trusts": {
+    title: "Fideicomisos para personas con necesidades especiales",
+    summary:
+      "Explore opciones de planificación a largo plazo y preguntas sobre la elegibilidad para determinados beneficios públicos de una persona con discapacidad.",
+  },
 };
 
 export default function HomePageEs() {
-  const featured = PRACTICE_AREAS.slice(0, 3);
+  const featured = PRACTICE_AREAS;
 
   return (
     <SiteFrame locale="es" otherLocaleHref="/">
@@ -89,7 +99,7 @@ export default function HomePageEs() {
               Apoyo legal para problemas de educación especial.
             </h2>
             <p className="mt-5 text-lg text-[color:var(--text-primary)] max-w-prose">
-              Estas son las situaciones por las que los padres nos llaman con mayor frecuencia. Si la suya no aparece aquí, llámenos. Su situación aún puede caer dentro de nuestra práctica.
+              Ayudamos con asuntos de educación especial, derechos de estudiantes con discapacidades y consultas sobre fideicomisos para personas con necesidades especiales. Llámenos si desea conversar sobre su situación.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">

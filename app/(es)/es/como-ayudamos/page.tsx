@@ -8,7 +8,7 @@ import { PRACTICE_AREAS, SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Cómo ayudamos",
   description:
-    "LONHA representa a padres en California en desacuerdos sobre el IEP, audiencias de proceso de impugnación, disciplina y expulsión escolar, y casos de discriminación bajo la Sección 504.",
+    "LONHA ayuda a familias en California con asuntos de educación especial, derechos por discapacidad y consultas sobre fideicomisos para personas con necesidades especiales.",
   alternates: { canonical: "/es/como-ayudamos", languages: { en: "/how-we-help", es: "/es/como-ayudamos" } },
 };
 
@@ -33,6 +33,11 @@ const PRACTICE_ES: Record<string, { title: string; summary: string }> = {
     summary:
       "La Sección 504 de la Ley de Rehabilitación y el Título II de la ADA protegen a estudiantes cuyas discapacidades afectan una actividad principal de la vida. Estos reclamos van más allá de IDEA y alcanzan a estudiantes que no están cubiertos por un IEP.",
   },
+  "special-needs-trusts": {
+    title: "Fideicomisos para personas con necesidades especiales",
+    summary:
+      "La planificación de un fideicomiso puede ayudar a cubrir necesidades a largo plazo y, según sus condiciones, proteger la elegibilidad para determinados beneficios públicos. Consulte con el bufete sobre las opciones para su familia.",
+  },
 };
 
 export default function HowWeHelpPageEs() {
@@ -51,10 +56,10 @@ export default function HowWeHelpPageEs() {
           </h1>
           <div className="mt-6 max-w-prose space-y-5 text-lg text-[color:var(--text-primary)] leading-relaxed">
             <p>
-              La Oficina Legal de Nicole Hodge Amey atiende cuatro tipos de casos. Cada uno se basa en una parte distinta de la ley federal de derechos por discapacidad. Cada uno tiene sus propios plazos, procesos y remedios.
+              La Oficina Legal de Nicole Hodge Amey atiende asuntos de educación especial y consultas sobre fideicomisos para personas con necesidades especiales. Cada asunto requiere evaluar las circunstancias y los requisitos legales aplicables.
             </p>
             <p>
-              Si la situación de su hijo no encaja perfectamente en una de estas categorías, eso no significa que no podamos ayudar. Muchos casos involucran más de uno de estos marcos legales al mismo tiempo.
+              Si su situación no encaja en una de estas categorías, puede comunicarse con el bufete para explicar brevemente lo que necesita.
             </p>
           </div>
         </div>
@@ -110,7 +115,7 @@ export default function HowWeHelpPageEs() {
 
       <CTABanner
         heading="¿No está seguro de cuál de estas aplica a su situación?"
-        body="Cuéntenos qué está pasando con el distrito escolar y le diremos qué marco legal corresponde."
+        body="Descríbanos brevemente su consulta educativa o de planificación para determinar los siguientes pasos."
         primaryCta={{ label: "Cuéntenos qué está pasando", href: "/es/contacto" }}
         secondaryCallLabel={`Llame al ${SITE.phone}`}
       />
