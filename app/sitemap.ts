@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/how-we-help/due-process",
     "/how-we-help/discipline-expulsion",
     "/how-we-help/section-504",
+    "/how-we-help/special-needs-trusts",
     "/know-your-rights",
     "/privacy",
     "/contact",

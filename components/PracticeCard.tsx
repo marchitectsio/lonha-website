@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, FileSearch, Scale, ShieldAlert, Gavel } from "lucide-react";
+import { ArrowRight, FileSearch, Scale, ShieldAlert, Gavel, Landmark } from "lucide-react";
 
-const ICONS = { FileSearch, Scale, ShieldAlert, Gavel } as const;
+const ICONS = { FileSearch, Scale, ShieldAlert, Gavel, Landmark } as const;
 type IconKey = keyof typeof ICONS;
 
 type Props = {
